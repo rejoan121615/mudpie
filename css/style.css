@@ -513,9 +513,98 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-/* index page  */
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+svg {
+  width: 100%;
+}
+
+/* colors  */
+
+/* d2d6dc */
+
+/* -------------------- index page ----------------- */
+
+/* ======== header =======  */
 
 .navbar {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.navbar-container {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+/* top navbar  */
+
+.container-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-btn {
+  /* @apply; */
+}
+
+.nav-btn button {
+  position: relative;
+  display: flex;
+  height: 1rem;
+  width: 1.3rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-btn button span {
+  height: 2px;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.brand-logo {
+  max-width: 106px;
+}
+
+@media (min-width: 768px) {
+  .brand-logo {
+    max-width: 175px;
+  }
+}
+
+.brand-logo svg {
+  width: 100%;
+}
+
+/* user area  */
+
+.user-area {
+}
+
+.user-area .profile-cart {
+  display: flex;
+  align-items: center;
+}
+
+.user-area button {
+}
+
+.user-area .user-profile {
+  margin-right: 2.25rem;
+  width: 1rem;
+}
+
+.user-area .cart-btn {
+  display: flex;
+  align-items: center;
+}
+
+.user-area .cart-btn svg {
+  margin-right: 2px;
+  width: 17px;
 }
