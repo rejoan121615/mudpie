@@ -2,7 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* index page  */
+svg {
+    width: 100%;
+}
+
+/* colors  */
+
+/* d2d6dc */
+
+/* -------------------- index page ----------------- */
+/* ======== header =======  */
 .navbar {
-  @apply px-3;
+    @apply px-3;
+}
+
+.navbar-container {
+    @apply py-[14px];
+}
+
+/* top navbar  */
+.container-inner {
+    @apply flex justify-between items-center;
+}
+
+.nav-btn {
+    /* @apply; */
+}
+
+.nav-btn button {
+    @apply relative w-[1.3rem] h-[1rem] flex flex-col justify-between;
+}
+.nav-btn button span {
+    @apply w-full h-0.5 bg-black;
+}
+.brand-logo {
+    @apply max-w-[106px] md:max-w-[175px];
+}
+.brand-logo svg {
+    @apply w-full;
+}
+
+
+/* user area  */
+.user-area {
+}
+.user-area .profile-cart {
+    @apply flex items-center;
+}
+
+.user-area button {
+}
+
+.user-area .user-profile {
+    @apply w-4 mr-9;
+}
+.user-area .cart-btn {
+  @apply flex items-center;
+}
+.user-area .cart-btn svg {
+  @apply w-[17px] mr-[2px];
 }
