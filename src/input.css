@@ -11,6 +11,15 @@ svg {
 /* d2d6dc */
 
 /* -------------------- index page ----------------- */
+
+.top-bar {
+    @apply flex flex-row justify-end text-end w-screen;
+}
+
+.top-bar-txt {
+  @apply w-screen flex justify-center;
+}
+
 /* ======== header =======  */
 .navbar {
     @apply px-3;
@@ -42,7 +51,6 @@ svg {
     @apply w-full;
 }
 
-
 /* user area  */
 .user-area {
 }
@@ -57,8 +65,8 @@ svg {
     @apply w-4 mr-9;
 }
 .user-area .cart-btn {
-  @apply flex items-center;
+    @apply flex items-center;
 }
 .user-area .cart-btn svg {
-  @apply w-[17px] mr-[2px];
+    @apply w-[17px] mr-[2px];
 }
