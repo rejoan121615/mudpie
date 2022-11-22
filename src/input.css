@@ -12,7 +12,7 @@ svg {
 
 /* -------------------- index page ----------------- */
 .container {
-  
+
 }
 .top-bar {
     @apply flex flex-row justify-end text-end w-screen;
@@ -24,7 +24,7 @@ svg {
 
 /* ======== header =======  */
 .navbar {
-    @apply px-3;
+    @apply px-3 lg:px-10;
 }
 
 .navbar-container {
@@ -37,7 +37,7 @@ svg {
 }
 
 .nav-btn {
-    /* @apply; */
+    @apply lg:hidden ;
 }
 
 .nav-btn button {
@@ -71,4 +71,20 @@ svg {
 }
 .user-area .cart-btn svg {
     @apply w-[17px] mr-[2px];
+}
+
+/* desktop mega menu  */
+.menu-wrap {
+  @apply flex items-center;
+}
+.desktop-menu {
+  @apply hidden lg:block lg:ml-2 ;
+}
+
+.desktop-menu .desktop-menu-list {
+  @apply flex ;
+}
+
+.desktop-menu-list .menu-item {
+  @apply px-2 ;
 }
