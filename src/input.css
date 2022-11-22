@@ -80,3 +80,19 @@ svg {
 .user-area .cart-btn svg {
     @apply w-[17px] mr-[2px];
 }
+
+
+/* Footer */
+
+.copt-parent{
+    @apply flex justify-center py-3;
+}
+.copt-parent ul{
+    @apply flex flex-col md:flex-row text-center;    
+}
+.copt-parent ul div{
+    @apply flex;
+}
+.copt-parent ul li{
+    @apply text-xs;
+}
