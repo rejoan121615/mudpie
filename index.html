@@ -5,6 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+        />
         <script src="//unpkg.com/alpinejs" defer></script>
         <link rel="stylesheet" href="css/style.css" />
     </head>
@@ -222,6 +226,34 @@
                     <h2 class="pre-header">shop by collection</h2>
                 </div>
             </div>
+            <!-- slider  -->
+            <div
+                id="collection-slider"
+                class=" swiper "
+                x-data="{ collection: shopByCollection}"
+            >
+                <div class="swiper-button-next"></div>
+                <div class="swiper-wrapper">
+                    <template x-for="item in collection">
+                        <div class="swiper-slide p-[14px] cursor-pointer
+                          lg:p-[0.875rem]
+                        outline-none after:opacity-0 hover:after:opacity-100 hover:relative
+                         block z-10 after:border-4 after:border-p2 after:absolute
+                          after:top-[0.25rem] after:left-[0.25rem] after:right-[0.25rem] 
+                          after:bottom-[1rem] after:-z-10 lg:after:bottom-[1.5rem] ">
+                            <div>
+                                <img :src="item.img" alt="" class=" w-full mb-3 " />
+                                <h2 x-text="item.name" class=" uppercase 
+                                 font-medium table mx-auto bg-white 
+                                 px-2 text-cusBlack text-[0.75rem] leading-[0.875rem]
+                                  lg:text-[1.25rem] lg:leading-[1.75rem] "></h2>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+
+                <div class="swiper-button-prev"></div>
+            </div>
         </section>
         <!-- footer -->
         <footer>
@@ -241,5 +273,8 @@
                 </ul>
             </div>
         </footer>
+        <!-- js files  -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="./js/script.js"></script>
     </body>
 </html>

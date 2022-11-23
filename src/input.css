@@ -19,7 +19,7 @@ svg {
      leading-8 mb-5 px-4 lowercase relative z-10
      lg:text-[1.75rem] lg:leading-[2.875rem] lg:mb-6 lg:pl-20
        after:w-full after:absolute after:border-b-4 after:border-p2 after:top-3 after:left-0 after:-z-10
-        lg:after:top-5 ;
+        lg:after:top-5;
 }
 
 /* colors  */
@@ -124,6 +124,9 @@ svg {
 .desktop-menu-list .menu-item {
     @apply pb-[10px] capitalize border-b-4 border-transparent hover:border-[#333];
 }
+
+/* slider  */
+
 /* Footer */
 
 .copt-parent {
@@ -137,4 +140,9 @@ svg {
 }
 .copt-parent ul li {
     @apply text-xs;
+}
+
+
+.swiper-notification {
+    display: none;
 }
