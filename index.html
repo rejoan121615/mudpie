@@ -5,19 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
-            integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
+        <script src="//unpkg.com/alpinejs" defer></script>
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
@@ -26,19 +14,19 @@
                 <a href="">Free Shipping on Orders $75+</a>
             </div>
             <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 5 6"
-              >
-                <path
-                  fill="#333"
-                  fill-rule="evenodd"
-                  d="M4.877.813a.408.408 0 00-.594 0L2.491 2.699.725.84a.403.403 0 00-.59 0 .458.458 0 000 .623l1.766 1.856L.123 5.192a.462.462 0 000 .627c.164.171.43.171.594 0l1.779-1.873 1.766 1.86a.403.403 0 00.59 0 .458.458 0 000-.623L3.086 3.327 4.877 1.44a.462.462 0 000-.627z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-          </span>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 5 6"
+                >
+                    <path
+                        fill="#333"
+                        fill-rule="evenodd"
+                        d="M4.877.813a.408.408 0 00-.594 0L2.491 2.699.725.84a.403.403 0 00-.59 0 .458.458 0 000 .623l1.766 1.856L.123 5.192a.462.462 0 000 .627c.164.171.43.171.594 0l1.779-1.873 1.766 1.86a.403.403 0 00.59 0 .458.458 0 000-.623L3.086 3.327 4.877 1.44a.462.462 0 000-.627z"
+                        clip-rule="evenodd"
+                    ></path>
+                </svg>
+            </span>
         </div>
         <header class="navbar">
             <div class="navbar-container">
@@ -91,9 +79,17 @@
                             </svg>
                         </a>
                         <!-- navbar  -->
-                        <div class="desktop-menu">
+                        <div
+                            x-data="{menuItems: ['what\'s new', 'home', 'women', 'seasonal', 'gift shop', 'sale', 'The Christmas Shop']}"
+                            class="desktop-menu"
+                        >
                             <ul class="desktop-menu-list">
+                              <template x-for="item in menuItems">
                                 <li class="menu-item">
+                                    <a x-text="item" href="#"></a>
+                                </li>
+                              </template>
+                                <!-- <li class="menu-item">
                                     <a href="/category/whats-new">What's New</a>
                                 </li>
                                 <li class="menu-item">
@@ -120,14 +116,14 @@
                                     <a href="/category/christmas-shop"
                                         >The Christmas Shop</a
                                     >
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
 
                     <!-- user area  -->
                     <div class="user-area">
-                        <div class=" user-nav ">
+                        <div class="user-nav">
                             <a href="">Customer Care</a>
                             <a href="">Inspire</a>
                         </div>
@@ -226,37 +222,46 @@
                 </div>
                 <!-- mobile searchbar  -->
                 <div class="navbar-mobile-search"></div>
-                 </div>
-            </header>
-        <!-- mobile searchbar  -->
-        <div class="navbar-mobile-search"></div>
-      </div>
-    </header>
-
-    <!-- Main -->
-    <section class="mb-8">
-      <div class="main-wrap">
-        <a href="">
-          <picture>
-            <source media="(max-width: 767px)" srcset="https://platform.mudpie.com/media/wysiwyg/1122_newb2csite_hero_giftguide_MOBILE.jpg?quality=80&amp;auto=webp&amp;format=pjpg">
-            <img src="https://platform.mudpie.com/media/wysiwyg/1122_newb2csite_hero_giftguide.jpg?quality=80&amp;auto=webp&amp;format=pjpg" alt="shop the gift shop">
-          </picture>        
-        </a>
-      </div>
-    </section>
-
-    <!-- footer -->
-    <footer>
-      <div class="copt-parent">
-        <ul class="flex flex-col md:flex-row">
-          <li>© 2022 All Rights Reserved</li>
-          <div>
-            <li><a href="#">&nbsp; |&nbsp; Privacy Policy</a></li>
-            <li><a href="#">&nbsp; |&nbsp; Affiliate Program&nbsp; | &nbsp;</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
             </div>
-        </ul>
-      </div>
-    </footer>
-  </body>
+        </header>
+
+        <!-- Main -->
+        <section class="mb-8">
+            <div class="main-wrap">
+                <a href="">
+                    <picture>
+                        <source
+                            media="(max-width: 767px)"
+                            srcset="
+                                https://platform.mudpie.com/media/wysiwyg/1122_newb2csite_hero_giftguide_MOBILE.jpg?quality=80&amp;auto=webp&amp;format=pjpg
+                            "
+                        />
+                        <img
+                            src="https://platform.mudpie.com/media/wysiwyg/1122_newb2csite_hero_giftguide.jpg?quality=80&amp;auto=webp&amp;format=pjpg"
+                            alt="shop the gift shop"
+                        />
+                    </picture>
+                </a>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer>
+            <div class="copt-parent">
+                <ul class="flex flex-col md:flex-row">
+                    <li>© 2022 All Rights Reserved</li>
+                    <div>
+                        <li><a href="#">&nbsp; |&nbsp; Privacy Policy</a></li>
+                        <li>
+                            <a href="#"
+                                >&nbsp; |&nbsp; Affiliate Program&nbsp; |
+                                &nbsp;</a
+                            >
+                        </li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </div>
+                </ul>
+            </div>
+        </footer>
+    </body>
 </html>
