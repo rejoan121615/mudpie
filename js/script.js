@@ -1,4 +1,5 @@
 document.addEventListener("alpine:init", () => {
+    // collection data store
     Alpine.data("shopByCollection", () => [
         {
             name: "Home",
@@ -21,6 +22,21 @@ document.addEventListener("alpine:init", () => {
             img: "https://platform.mudpie.com/media/wysiwyg/HomePage/Shop_by_Category_Sale.jpg",
         },
     ]);
+    // trending data store
+    Alpine.data("trending", () => [
+        {
+            title: "one stop shop",
+            des: "Easily find ready-to-gift options for everyone on your list this holiday season!",
+            img: "https://platform.mudpie.com/media/wysiwyg/1122_newb2csite_cmsblog1.jpg?quality=80&auto=webp&format=pjpg",
+            btn: "shop gifts",
+        },
+        {
+            title: "Baby & Kids Christmas",
+            des: "Stocking stuffers, interactive gifts, winter break fun? We've got it all for your little elves!",
+            img: "https://platform.mudpie.com/media/wysiwyg/1122_newb2csite_cmsblog2.jpg?quality=80&auto=webp&format=pjpg",
+            btn: "shop gifts for kids",
+        },
+    ]);
 });
 
 var swiper = new Swiper("#collection-slider", {
@@ -39,22 +55,9 @@ var swiper = new Swiper("#collection-slider", {
         // when window width is >= 480px
         650: {
             slidesPerView: 3.3,
-      },
-      1200: {
-          slidesPerView: 4.3
-        }
+        },
+        1200: {
+            slidesPerView: 4.3,
+        },
     },
 });
-// var swiper = new Swiper(".mySwiper", {
-//     cssMode: true,
-//     autoHeight: true,
-//     navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//     },
-//     pagination: {
-//         el: ".swiper-pagination",
-//     },
-//     mousewheel: true,
-//     keyboard: true,
-// });

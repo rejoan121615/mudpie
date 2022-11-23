@@ -13,15 +13,75 @@ svg {
         url("../fonts/font.woff2") format("woff2");
 }
 
+@font-face {
+    font-family: "lato";
+    src: url(https://use.typekit.net/af/220823/000000000000000000015231/27/l?subset_id=2&fvd=n7&v=3)
+            format("woff2"),
+        url(https://use.typekit.net/af/220823/000000000000000000015231/27/d?subset_id=2&fvd=n7&v=3)
+            format("woff"),
+        url(https://use.typekit.net/af/220823/000000000000000000015231/27/a?subset_id=2&fvd=n7&v=3)
+            format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 700;
+    font-stretch: normal;
+}
+@font-face {
+    font-family: "lato";
+    src: url(https://use.typekit.net/af/180254/00000000000000000001522c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)
+            format("woff2"),
+        url(https://use.typekit.net/af/180254/00000000000000000001522c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)
+            format("woff"),
+        url(https://use.typekit.net/af/180254/00000000000000000001522c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)
+            format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+}
+@font-face {
+    font-family: "linotype-didot";
+    src: url(https://use.typekit.net/af/b00c42/00000000000000007735bbdf/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)
+            format("woff2"),
+        url(https://use.typekit.net/af/b00c42/00000000000000007735bbdf/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)
+            format("woff"),
+        url(https://use.typekit.net/af/b00c42/00000000000000007735bbdf/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)
+            format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    @apply font-didot;
+}
+
+
 /* global component styles ------------------------------------- */
-.pre-header {
-    @apply font-DearJane text-cusBlack text-xl
+@layer components {
+    .pre-header {
+        @apply font-DearJane text-cusBlack text-xl
      leading-8 mb-5 px-4 lowercase relative z-10
      lg:text-[1.75rem] lg:leading-[2.875rem] lg:mb-6 lg:pl-20
        after:w-full after:absolute after:border-b-4 after:border-p2 after:top-3 after:left-0 after:-z-10
         lg:after:top-5;
-}
+    }
 
+    .btn-primary {
+        @apply inline-block cursor-pointer min-h-[4rem] w-full leading-[1.5rem]
+         bg-p2 text-cusBlack uppercase font-lato font-bold py-5 px-[48px]
+          text-center relative after:w-[calc(100%_-_1rem)] after:h-[calc(100%_-_1rem)] after:absolute
+         after:border after:border-cusBlack after:left-[0.5rem] after:top-[0.5rem] hover:after:border-2  ;
+    }
+
+    .para {
+        @apply font-lato text-cusBlack text-[0.875rem] tracking-[0.019rem] 
+         md:text-base ;
+    }
+    
+}
 /* colors  */
 
 /* d2d6dc */
