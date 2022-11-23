@@ -58,6 +58,34 @@ document.addEventListener("alpine:init", () => {
             img: "https://platform.mudpie.com/media/wysiwyg/HomePage/1122_newb2csite_seewhatsnew_3up3.jpg",
         },
     ]);
+    // shop best sellers
+    Alpine.data("shopBestSeller", () => [
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/4/44400097t.jpg?optimize=high&fit=bounds&height=&width=",
+            title: "Farmhouse Christmas Tree Soap Dish Set",
+            price: "$18.50",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/4/44400084.jpg?optimize=high&fit=bounds&height=&width=",
+            title: "Deer Soap Stand Set",
+            price: "$35.00",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/3/43900106.jpg?optimize=high&fit=bounds&height=&width=",
+            title: "Merry and Bright Reindeer Table Runner",
+            price: "$39.00",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/3/43500148h.jpg?optimize=high&fit=bounds&height=&width=",
+            title: "Hot Cocoa Recipe Mug",
+            price: "$23.00",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/2/42600718r.jpg?optimize=high&fit=bounds&height=&width=",
+            title: "Red Place Card Tree",
+            price: "$9.00",
+        },
+    ]);
 });
 
 var swiper = new Swiper("#collection-slider", {
@@ -102,16 +130,36 @@ var swiper = new Swiper("#whats_new_slider", {
         },
         // when window width is >= 480px
         768: {
-          slidesPerView: 2,
-          spaceBetween: 20,
+            slidesPerView: 2,
+            spaceBetween: 20,
             navigation: {
                 nextEl: ".large-next",
                 prevEl: ".large-prev",
             },
         },
         1025: {
-          slidesPerView: 3,
-          spaceBetween: 15
+            slidesPerView: 3,
+            spaceBetween: 15,
+        },
+    },
+});
+
+var swiper = new Swiper("#best_seller_slider", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 4,
+            spaceBetween: 10,
         },
     },
 });

@@ -327,26 +327,30 @@
                         </div>
                     </template>
                 </div>
-                <!-- only smaller screen  -->
-                <!-- <div class=" bg-white absolute z-20 right-0 bottom-[20%] 
-                  w-[50px] h-[50px] ">
-                    <div
-                      class=" sm-prev swiper-button-prev md:block text-cusBlack"
-                  ></div>
-                  <div
-                      class=" sm-next swiper-button-next md:block text-cusBlack"
-                  ></div>
-                </div> -->
-                 <!-- large desktop screen  -->
-                <!-- <div
-                    class=" large-prev swiper-button-prev hidden lg:block text-cusBlack"
-                ></div>
-                <div
-                    class=" large-next swiper-button-next hidden lg:block text-cusBlack"
-                ></div> -->
             </div>
         </section>
 
+        <!-- shop best sellers  -->
+        <section>
+          <div class="container-inner">
+                <div>
+                    <h2 class="pre-header">shop best sellers</h2>
+                </div>
+          </div>
+          <div id="best_seller_slider" x-data="{product: shopBestSeller}" class=" swiper">
+            <div  class="swiper-wrapper">
+                <template x-for="item in product">
+                    <div class="swiper-slide">
+                        <img :src="item.img" alt="post image">
+                        <p x-text="item.title" class=" para text-xs m-2 text-center md:text-base "></p>
+                        <p x-text="item.price" class=" para text-center font-bold text-xs md:text-base "></p>
+                    </div>
+                </template>
+            </div>
+            <div class="swiper-button-prev hidden md:block"></div>
+            <div class="swiper-button-next hidden md:block"></div>
+          </div>
+        </section>
         <!-- sign form -->
         <section
             class="flex flex-row justify-center bg-[rgba(255, 255, 255, 0)]"

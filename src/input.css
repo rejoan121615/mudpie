@@ -90,6 +90,10 @@ h1, h2, h3, h4, h5, h6 {
     .post-des {
         @apply para mb-[1.75rem] text-center mx-[2.25rem] lg:max-w-[24rem] lg:mx-auto lg:mb-11;
     }
+
+    .swiper-button-prev, .swiper-button-next  {
+        @apply text-cusBlack scale-[0.6] lg:scale-[1] ;
+    }
 }
 /* colors  */
 
@@ -193,3 +197,5 @@ h1, h2, h3, h4, h5, h6 {
 .desktop-menu-list .menu-item {
     @apply pb-[10px] capitalize border-b-4 border-transparent hover:border-[#333];
 }
+
+
