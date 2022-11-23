@@ -252,42 +252,46 @@
                         </div>
                     </template>
                 </div>
-
                 <div
                     class="swiper-button-prev hidden md:block text-cusBlack"
                 ></div>
             </div>
         </section>
         <!-- trending now section  -->
-        <section class=" mb-8 lg:mb-[52px] ">
+        <section class="mb-8 lg:mb-[52px]">
             <div class="container-inner">
                 <div>
                     <h2 class="pre-header">trending now</h2>
                 </div>
             </div>
-            <div x-data="{ trending: trending}" class="grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-y-0 md:mx-10
-             md:gap-x-8 ">
+            <div
+                x-data="{ trending: trending}"
+                class="grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-y-0 md:mx-10 md:gap-x-8"
+            >
                 <template x-for=" post in trending">
-                    <div class=" relative h-[max-content] after:border-4 after:border-p2
-                     after:absolute after:left-4 after:right-4 after:top-4 after:bottom-[30px] 
-                      ">
+                    <div
+                        class="relative h-[max-content] after:border-4 after:border-p2 after:absolute after:left-4 after:right-4 after:top-4 after:bottom-[30px]"
+                    >
                         <img
                             :src="post.img"
                             alt="trending post img"
                             class="min-h-[14.25rem] mb-[1.5rem]"
                         />
                         <h1
-                            class="font-didot uppercase text-[1.75rem] leading-[2rem] mx-auto 
-                            text-center mb-[1.25rem] lg:text-[32px]
-                             "
+                            class="post-title"
                             x-text="post.title"
                         ></h1>
-                        <p x-text="post.des" class=" para mb-[1.75rem] text-center mx-[2.25rem] lg:max-w-[24rem] lg:mx-auto lg:mb-11 "></p>
-                        <div class=" mx-[2.25rem] relative z-20 lg:max-w-[18.5rem] lg:mx-auto ">
+                        <p
+                            x-text="post.des"
+                            class=" post-des"
+                        ></p>
+                        <div
+                            class="mx-[2.25rem] relative z-20 lg:max-w-[18.5rem] lg:mx-auto"
+                        >
                             <a
                                 x-text="post.btn"
                                 href=""
-                                class=" btn-primary block  "
+                                class="btn-primary block"
                             ></a>
                         </div>
                     </div>
@@ -295,22 +299,79 @@
             </div>
         </section>
 
-        <!-- sign form -->
-        <section class="flex flex-row justify-center bg-[rgba(255, 255, 255, 0)]">
-          <form action="" class="flex flex-row justify-center max-w-[600px] px-[5px] py-[10px]">
-            <div class="flex flex-col">
-              <div class="flex flex-row justify-center">
-                <img src="imges/sing-form-head.png" alt="">
-              </div>
-              <div class="flex flex-row justify-center px-[6px] py-[10px]">
-                <label for="" class="text-[18px] mb-[14px] font-bold text-[rgba(51, 51, 51)]">
-                  Which Mud Pie Collection are you most interested in?
-                </label>
-              </div>
+        <!-- see whats new section  -->
+        <section>
+            <div class="container-inner">
+                <div>
+                    <h2 class="pre-header">see what's new</h2>
+                </div>
             </div>
-          </form>
+            <div
+                x-data="{ posts: seeWhatsNew}"
+                class="swiper md:px-2 lg:px-11 2xl:px-16 "
+                id="whats_new_slider"
+            >
+                
+                <div class="swiper-wrapper">
+                    <template x-for="post in posts">
+                        <div
+                            class="swiper-slide text-center "
+                        >
+                            <img :src="post.img" alt="post images" class="post-img" />
+                            <h2
+                                x-text="post.title"
+                                class=" post-title "
+                            ></h2>
+                            <p class=" post-des" x-text="post.des"></p>
+                            <a href="" class=" btn-primary inline-block w-[initial] " x-text="post.btn" ></a>
+                        </div>
+                    </template>
+                </div>
+                <!-- only smaller screen  -->
+                <!-- <div class=" bg-white absolute z-20 right-0 bottom-[20%] 
+                  w-[50px] h-[50px] ">
+                    <div
+                      class=" sm-prev swiper-button-prev md:block text-cusBlack"
+                  ></div>
+                  <div
+                      class=" sm-next swiper-button-next md:block text-cusBlack"
+                  ></div>
+                </div> -->
+                 <!-- large desktop screen  -->
+                <!-- <div
+                    class=" large-prev swiper-button-prev hidden lg:block text-cusBlack"
+                ></div>
+                <div
+                    class=" large-next swiper-button-next hidden lg:block text-cusBlack"
+                ></div> -->
+            </div>
         </section>
 
+        <!-- sign form -->
+        <section
+            class="flex flex-row justify-center bg-[rgba(255, 255, 255, 0)]"
+        >
+            <form
+                action=""
+                class="flex flex-row justify-center max-w-[600px] px-[5px] py-[10px]"
+            >
+                <div class="flex flex-col">
+                    <div class="flex flex-row justify-center">
+                        <img src="imges/sing-form-head.png" alt="" />
+                    </div>
+                    <div
+                        class="flex flex-row justify-center px-[6px] py-[10px]"
+                    >
+                        <label
+                            for=""
+                            class="text-[18px] mb-[14px] font-bold text-[rgba(51, 51, 51)]"
+                        >
+                            Which Mud Pie Collection are you most interested in?
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </section>
 
         <!-- footer -->
         <footer>

@@ -80,7 +80,16 @@ h1, h2, h3, h4, h5, h6 {
         @apply font-lato text-cusBlack text-[0.875rem] tracking-[0.019rem] 
          md:text-base  ;
     }
-    
+
+    .post-title {
+        @apply font-didot uppercase text-[1.75rem] leading-[2rem] mx-auto text-center mb-[1.25rem] lg:text-[32px];
+    }
+    .post-img {
+        @apply w-full mb-6;
+    }
+    .post-des {
+        @apply para mb-[1.75rem] text-center mx-[2.25rem] lg:max-w-[24rem] lg:mx-auto lg:mb-11;
+    }
 }
 /* colors  */
 
