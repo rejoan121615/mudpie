@@ -259,15 +259,16 @@
             </div>
         </section>
         <!-- trending now section  -->
-        <section>
+        <section class=" mb-8 lg:mb-[52px] ">
             <div class="container-inner">
                 <div>
                     <h2 class="pre-header">trending now</h2>
                 </div>
             </div>
-            <div x-data="{ trending: trending}" class="grid grid-cols-1">
+            <div x-data="{ trending: trending}" class="grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-y-0 md:mx-10
+             md:gap-x-8 ">
                 <template x-for=" post in trending">
-                    <div class=" relative after:border-4 after:border-p2
+                    <div class=" relative h-[max-content] after:border-4 after:border-p2
                      after:absolute after:left-4 after:right-4 after:top-4 after:bottom-[30px] 
                       ">
                         <img
@@ -276,11 +277,13 @@
                             class="min-h-[14.25rem] mb-[1.5rem]"
                         />
                         <h1
-                            class="font-didot uppercase text-[1.75rem] leading-[2rem] mx-auto text-center mb-[1.25rem]"
+                            class="font-didot uppercase text-[1.75rem] leading-[2rem] mx-auto 
+                            text-center mb-[1.25rem] lg:text-[32px]
+                             "
                             x-text="post.title"
                         ></h1>
-                        <p x-text="post.des" class=" para mb-[1.75rem] text-center mx-[2.25rem] "></p>
-                        <div class=" mx-[2.25rem] relative z-20 ">
+                        <p x-text="post.des" class=" para mb-[1.75rem] text-center mx-[2.25rem] lg:max-w-[24rem] lg:mx-auto lg:mb-11 "></p>
+                        <div class=" mx-[2.25rem] relative z-20 lg:max-w-[18.5rem] lg:mx-auto ">
                             <a
                                 x-text="post.btn"
                                 href=""

@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .para {
         @apply font-lato text-cusBlack text-[0.875rem] tracking-[0.019rem] 
-         md:text-base ;
+         md:text-base  ;
     }
     
 }
