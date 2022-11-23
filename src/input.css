@@ -15,7 +15,15 @@ svg {
 
 }
 .top-bar {
-    @apply flex flex-row justify-end text-end w-screen;
+    @apply flex flex-row justify-end
+     text-end w-screen pt-2 pb-2
+     border-b-[1px] border-[#dee2e6];
+}
+.top-bar span{
+    @apply mr-4 w-4;
+}
+.top-bar span svg{
+    @apply w-full h-full;
 }
 
 .top-bar-txt {
@@ -101,4 +109,18 @@ svg {
 
 .desktop-menu-list .menu-item {
   @apply px-2 ;
+}
+/* Footer */
+
+.copt-parent{
+    @apply flex justify-center py-3;
+}
+.copt-parent ul{
+    @apply flex flex-col md:flex-row text-center;    
+}
+.copt-parent ul div{
+    @apply flex;
+}
+.copt-parent ul li{
+    @apply text-xs;
 }
