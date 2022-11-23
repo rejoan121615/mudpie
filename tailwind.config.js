@@ -13,6 +13,8 @@ module.exports = {
             },
             fontFamily: {
                 DearJane: ["DearJane", "sans-serif"],
+                didot: ["linotype-didot", "serif"],
+                lato: ["lato", 'sans-serif'],
             },
         },
     },
