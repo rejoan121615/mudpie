@@ -30,6 +30,20 @@ var swiper = new Swiper("#collection-slider", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 2.3,
+            navigation: false,
+        },
+        // when window width is >= 480px
+        650: {
+            slidesPerView: 3.3,
+      },
+      1200: {
+          slidesPerView: 4.3
+        }
+    },
 });
 // var swiper = new Swiper(".mySwiper", {
 //     cssMode: true,
