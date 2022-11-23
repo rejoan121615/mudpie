@@ -6,28 +6,43 @@ svg {
     width: 100%;
 }
 
+/* fonts  */
+@font-face {
+    font-family: "DearJane";
+    src: url("../fonts/font.woff") format("woff"),
+        url("../fonts/font.woff2") format("woff2");
+}
+
+/* global component styles ------------------------------------- */
+.pre-header {
+    @apply font-DearJane text-cusBlack text-xl
+     leading-8 mb-5 px-4 lowercase relative z-10
+     lg:text-[1.75rem] lg:leading-[2.875rem] lg:mb-6 lg:pl-20
+       after:w-full after:absolute after:border-b-4 after:border-p2 after:top-3 after:left-0 after:-z-10
+        lg:after:top-5 ;
+}
+
 /* colors  */
 
 /* d2d6dc */
 
 /* -------------------- index page ----------------- */
 .container {
-
 }
 .top-bar {
     @apply flex flex-row justify-end
      text-end w-screen pt-2 pb-2
      border-b-[1px] border-[#dee2e6];
 }
-.top-bar span{
+.top-bar span {
     @apply mr-4 w-4;
 }
-.top-bar span svg{
+.top-bar span svg {
     @apply w-full h-full;
 }
 
 .top-bar-txt {
-  @apply w-screen flex justify-center;
+    @apply w-screen flex justify-center;
 }
 
 /* ======== header =======  */
@@ -45,7 +60,7 @@ svg {
 }
 
 .nav-btn {
-    @apply lg:hidden ;
+    @apply lg:hidden;
 }
 
 .nav-btn button {
@@ -63,14 +78,13 @@ svg {
 
 /* user area  */
 .user-area {
-
 }
 .user-area .user-nav {
-  @apply hidden lg:flex lg:mb-4 ;
+    @apply hidden lg:flex lg:mb-4;
 }
 
 .user-area .user-nav a {
-  @apply block first:mr-3;
+    @apply block first:mr-3;
 }
 
 /* profile buttons  */
@@ -82,7 +96,7 @@ svg {
 }
 
 .user-area .search-btn {
-  @apply hidden w-4 lg:block;
+    @apply hidden w-4 lg:block;
 }
 
 .user-area .user-profile {
@@ -97,30 +111,30 @@ svg {
 
 /* desktop mega menu  */
 .menu-wrap {
-  @apply flex items-center;
+    @apply flex items-center;
 }
 .desktop-menu {
-  @apply hidden lg:block lg:ml-2 ;
+    @apply hidden lg:block lg:ml-2;
 }
 
 .desktop-menu .desktop-menu-list {
-  @apply flex gap-x-4 lg:ml-16 ;
+    @apply flex gap-x-4 lg:ml-16;
 }
 
 .desktop-menu-list .menu-item {
-  @apply pb-[10px] capitalize border-b-4 border-transparent hover:border-[#333]   ;
+    @apply pb-[10px] capitalize border-b-4 border-transparent hover:border-[#333];
 }
 /* Footer */
 
-.copt-parent{
+.copt-parent {
     @apply flex justify-center py-3;
 }
-.copt-parent ul{
-    @apply flex flex-col md:flex-row text-center;    
+.copt-parent ul {
+    @apply flex flex-col md:flex-row text-center;
 }
-.copt-parent ul div{
+.copt-parent ul div {
     @apply flex;
 }
-.copt-parent ul li{
+.copt-parent ul li {
     @apply text-xs;
 }
