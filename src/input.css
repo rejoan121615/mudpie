@@ -104,11 +104,11 @@ svg {
 }
 
 .desktop-menu .desktop-menu-list {
-  @apply flex ;
+  @apply flex gap-x-4 lg:ml-16 ;
 }
 
 .desktop-menu-list .menu-item {
-  @apply px-2 ;
+  @apply pb-[10px] capitalize border-b-4 border-transparent hover:border-[#333]   ;
 }
 /* Footer */
 
