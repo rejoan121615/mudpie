@@ -119,9 +119,6 @@ document.addEventListener("alpine:init", () => {
             img: "https://scontent.cdninstagram.com/v/t51.2885-15/316054246_427166596295028_965212903024969087_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=LRTWZYaPC3UAX8bHasN&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfDvq4kTPxp289BD6nFCq5xS4l_nTmVvhcLuy0icdjacpQ&oe=63833A9D",
         },
         {
-            img: "https://scontent.cdninstagram.com/v/t51.2885-15/316054246_427166596295028_965212903024969087_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=LRTWZYaPC3UAX8bHasN&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfDvq4kTPxp289BD6nFCq5xS4l_nTmVvhcLuy0icdjacpQ&oe=63833A9D",
-        },
-        {
             img: "https://scontent.cdninstagram.com/v/t51.2885-15/315558565_130468039609283_3430198335191319169_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=HxAfiloGa_sAX-D7v7M&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfDKdXwf2fS8BZRgqPb1En-PQW8cy5zUAY8AEwVDvY2GjA&oe=6383EA15",
         },
         {
@@ -171,6 +168,9 @@ document.addEventListener("alpine:init", () => {
         },
         {
             img: "https://scontent.cdninstagram.com/v/t51.2885-15/313230380_652752449549041_1627979860311362026_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=dH40k5_-v9IAX88774p&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfDVx3NqFxd-vnPBETuJmvJn-kCvW3tEj6V4QSX335RiOQ&oe=6384585E",
+        },
+        {
+            img: "https://scontent.cdninstagram.com/v/t51.29350-15/316786993_206033308463727_5371169783382967445_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=-U3kogQhCVMAX8Usk43&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&oh=00_AfDZ-FE4_QOoyrlmZfz-uFQ0b87YnFJbpmj6-eQbqHenSg&oe=63841FEF",
         },
     ]);
 });

@@ -200,3 +200,28 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* shop the gram section  */
+#gram-grid .grid-wrap {
+    /* @apply grid grid-cols-2 md:grid-cols-5; */
+    overflow: hidden;
+}
+#gram-grid .img-wrap {
+    @apply float-left w-1/2 pt-[50%] md:w-1/5 md:pt-[20%];
+    /* float: left;
+    width: 50%;
+    padding-top: 50%; */
+}
+/* #gram-grid .img-wrap:nth-child(2) {
+    @apply md:col-span-2 md:row-span-2 ;  
+} */
+/* #gram-grid div.img-wrap:nth-child(7n + 1) {
+    @apply md:col-span-2 md:row-span-2 ;
+} */
+#gram-grid div.img-wrap:nth-of-type(7n + 1) {
+    @apply md:w-2/5 md:pt-[40%] md:float-right;
+}
+#gram-grid div.img-wrap:nth-of-type(14n + 1) {
+    @apply md:w-2/5 md:pt-[40%] md:float-left;
+}
+/* #gram-grid .img-wrap:nth-child(14n + 1) {
+    @apply md:w-2/5 md:pt-[40%];
+} */
