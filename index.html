@@ -355,6 +355,30 @@
             <div class="swiper-button-next hidden md:block"></div>
           </div>
         </section>
+        <!-- shop the gram  -->
+        <section>
+          <div class="container-inner">
+                <div>
+                    <h2 class="pre-header">shop the gram</h2>
+                </div>
+          </div>
+          <div class="the-gram" x-data="{product: gram}">
+            <div>
+                <template x-for="pic in product">
+                    <div :style="`background: transparent url('${pic.img}') no-repeat center center; background-size: 100% 100%;`" 
+                    class=" cursor-pointer group relative float-left w-1/2 pt-[50%] " >
+                    <div class=" opacity-0 transition-all
+                     group-hover:opacity-100 bg-[rgba(0,0,0,.8)] w-full
+                      h-full absolute left-0 top-0 flex flex-col justify-center items-center
+                      ">
+                        <img class=" w-6 mb-2 " src="./imges/icons/instagram.png" alt="instagram icon">
+                        <p class=" uppercase text-white">shop now</p>
+                    </div>
+                </div>
+                </template>
+            </div>
+          </div>
+        </section>
         <!-- sign form -->
         <section class="flex flex-row justify-center bg-[rgba(255, 255, 255, 0)]">
           <form action="" class="flex flex-row justify-center max-w-[600px] px-[5px] py-[10px]">
