@@ -7,6 +7,7 @@ module.exports = {
                 ash: "#d2d6dc",
                 cusBlack: "#333333",
                 p2: "#f9dadf",
+                cusRed: "#d03320",
             },
             height: {
                 0.5: "2px",
@@ -14,7 +15,7 @@ module.exports = {
             fontFamily: {
                 DearJane: ["DearJane", "sans-serif"],
                 didot: ["linotype-didot", "serif"],
-                lato: ["lato", 'sans-serif'],
+                lato: ["lato", "sans-serif"],
             },
         },
     },

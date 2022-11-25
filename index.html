@@ -9,8 +9,12 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
         />
-        <script src="//unpkg.com/alpinejs" defer></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"
+        />
         <link rel="stylesheet" href="css/style.css" />
+        <script src="//unpkg.com/alpinejs" defer></script>
     </head>
     <body>
         <!-- Topber -->
@@ -1024,10 +1028,10 @@
                         </div>
                     </div>
 
-                    <div class="flex flex-row">
-                        <div class="grow">
+                    <div class="">
+                        <div class="flex gap-x-[10px] mb-5 h-[38px]">
                             <input
-                                class="w-full box-border rounded-sm text-[18px] font-normal bg-[rgba(255, 255, 255)] border-[1px] border-[#d03320]"
+                                class="flex-grow box-border rounded-sm text-[18px] font-normal bg-[rgba(255, 255, 255)] border-[1px] h-full border-cusRed hover:border-cusBlack pl-4 focus:outline-none focus:shadow-sm"
                                 type="email"
                                 autocomplete="email"
                                 name="email"
@@ -1036,10 +1040,75 @@
                                 aria-label="Email address"
                             />
                             <button
-                                class="bg-[#f9dadf] rounded-sm py-[11px] px-[10px] text-base font-bold"
+                                class="px-[10px] py-[11px] bg-p2 uppercase font-medium text-cusBlack text-base rounded-[2px] border-0 leading-[16px]"
                             >
                                 SIGN UP
                             </button>
+                        </div>
+                        <div class="flex relative h-[38px] mb-5">
+                            <!-- select box clone  -->
+                            <div
+                                x-data @click="$store.selectedCountry.listToggle()"
+                                class="w-[60px] h-full absolute left-0 top-0 z-10 flex items-center pl-[10px] gap-x-2 cursor-pointer"
+                            >
+                                <span
+                                    x-data
+                                    :class="$store.selectedCountry.active"
+                                    class="w-4"
+                                ></span>
+                                <!-- icon  -->
+                                <div class="w-5">
+                                    <svg
+                                        viewBox="0 0 20 20"
+                                        aria-hidden="true"
+                                        focusable="false"
+                                        class=""
+                                        transform=""
+                                        style="fill: rgb(180, 187, 195)"
+                                    >
+                                        <path
+                                            d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <input
+                                class="flex-grow box-border rounded-sm text-[18px] font-normal bg-[rgba(255, 255, 255)] border-[1px] border-cusRed hover:border-cusBlack pl-[74px] py-1 focus:outline-none focus:shadow-sm"
+                                type="email"
+                                autocomplete="email"
+                                name="email"
+                                tabindex="0"
+                                placeholder="Phone Number"
+                                aria-label="Email address"
+                            />
+                            <!-- country lists  -->
+
+                            <div
+                                x-data x-show="$store.selectedCountry.showList"
+                                class="w-full absolute left-0 top-[38px] h-[75px] bg-white border border-cusBlack border-t-0 overflow-y-auto hide-scroller"
+                            >
+                                <ul x-data="{country: country}">
+                                    <template x-for="list in country">
+                                        <li
+                                            @click="$store.selectedCountry.activeHandler(list.code)"
+                                            class="flex items-center gap-x-3 p-2 cursor-pointer hover:bg-[#e6e6e6]"
+                                        >
+                                            <span
+                                                :class="list.code"
+                                                class="w-4"
+                                            ></span>
+                                            <span
+                                                x-text="list.name"
+                                                class="font-lato text-base text-cusBlack"
+                                            ></span>
+                                            <span
+                                                x-text="list.dial_code"
+                                                class="font-lato text-base text-[#b4bbc3]"
+                                            ></span>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 

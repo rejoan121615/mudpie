@@ -58,6 +58,10 @@ h1, h2, h3, h4, h5, h6 {
     @apply font-didot;
 }
 
+.hide-scroller::-webkit-scrollbar {
+    width: 0!important;
+    scrollbar-width: none;
+}
 
 /* global component styles ------------------------------------- */
 @layer components {
