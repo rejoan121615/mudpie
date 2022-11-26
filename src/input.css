@@ -107,19 +107,19 @@ h1, h2, h3, h4, h5, h6 {
 .container {
 }
 .top-bar {
-    @apply flex flex-row justify-end
-     text-end w-screen pt-2 pb-2
+    @apply flex flex-row justify-end px-4
+     text-end w-full pt-2 pb-2
      border-b-[1px] border-[#dee2e6];
 }
-.top-bar span {
-    @apply mr-4 w-4;
+.top-bar button {
+    @apply  w-4;
 }
-.top-bar span svg {
+.top-bar button svg {
     @apply w-full h-full;
 }
 
 .top-bar-txt {
-    @apply w-screen flex justify-center;
+    @apply  flex justify-center;
 }
 
 /* ======== header =======  */
