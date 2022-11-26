@@ -22,27 +22,25 @@
     </head>
     <body>
         <!-- Topber -->
-        <template x-data x-if="$store.topBar.show">
-            <div class="top-bar">
-                <div class="top-bar-txt flex-grow text-center">
-                    <a href="">Free Shipping on Orders $75+</a>
-                </div>
-                <button x-data @click="$store.topBar.showHandler()">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 5 6"
-                    >
-                        <path
-                            fill="#333"
-                            fill-rule="evenodd"
-                            d="M4.877.813a.408.408 0 00-.594 0L2.491 2.699.725.84a.403.403 0 00-.59 0 .458.458 0 000 .623l1.766 1.856L.123 5.192a.462.462 0 000 .627c.164.171.43.171.594 0l1.779-1.873 1.766 1.86a.403.403 0 00.59 0 .458.458 0 000-.623L3.086 3.327 4.877 1.44a.462.462 0 000-.627z"
-                            clip-rule="evenodd"
-                        ></path>
-                    </svg>
-                </button>
+        <div x-data x-show="$store.topBar.show" class="top-bar">
+            <div class="top-bar-txt flex-grow text-center">
+                <a href="">Free Shipping on Orders $75+</a>
             </div>
-        </template>
+            <button x-data @click="$store.topBar.showHandler()">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 5 6"
+                >
+                    <path
+                        fill="#333"
+                        fill-rule="evenodd"
+                        d="M4.877.813a.408.408 0 00-.594 0L2.491 2.699.725.84a.403.403 0 00-.59 0 .458.458 0 000 .623l1.766 1.856L.123 5.192a.462.462 0 000 .627c.164.171.43.171.594 0l1.779-1.873 1.766 1.86a.403.403 0 00.59 0 .458.458 0 000-.623L3.086 3.327 4.877 1.44a.462.462 0 000-.627z"
+                        clip-rule="evenodd"
+                    ></path>
+                </svg>
+            </button>
+        </div>
 
         <header class="navbar">
             <div class="navbar-container">
