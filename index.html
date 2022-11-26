@@ -13,31 +13,36 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"
         />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        />
         <link rel="stylesheet" href="css/style.css" />
         <script src="//unpkg.com/alpinejs" defer></script>
     </head>
     <body>
         <!-- Topber -->
-        <div class="top-bar">
-            <div class="top-bar-txt flex-grow text-center">
-                <a href="">Free Shipping on Orders $75+</a>
+        <template x-data x-if="$store.topBar.show">
+            <div class="top-bar">
+                <div class="top-bar-txt flex-grow text-center">
+                    <a href="">Free Shipping on Orders $75+</a>
+                </div>
+                <button x-data @click="$store.topBar.showHandler()">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 5 6"
+                    >
+                        <path
+                            fill="#333"
+                            fill-rule="evenodd"
+                            d="M4.877.813a.408.408 0 00-.594 0L2.491 2.699.725.84a.403.403 0 00-.59 0 .458.458 0 000 .623l1.766 1.856L.123 5.192a.462.462 0 000 .627c.164.171.43.171.594 0l1.779-1.873 1.766 1.86a.403.403 0 00.59 0 .458.458 0 000-.623L3.086 3.327 4.877 1.44a.462.462 0 000-.627z"
+                            clip-rule="evenodd"
+                        ></path>
+                    </svg>
+                </button>
             </div>
-            <button>
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 5 6"
-                >
-                    <path
-                        fill="#333"
-                        fill-rule="evenodd"
-                        d="M4.877.813a.408.408 0 00-.594 0L2.491 2.699.725.84a.403.403 0 00-.59 0 .458.458 0 000 .623l1.766 1.856L.123 5.192a.462.462 0 000 .627c.164.171.43.171.594 0l1.779-1.873 1.766 1.86a.403.403 0 00.59 0 .458.458 0 000-.623L3.086 3.327 4.877 1.44a.462.462 0 000-.627z"
-                        clip-rule="evenodd"
-                    ></path>
-                </svg>
-            </button>
-        </div>
+        </template>
 
         <header class="navbar">
             <div class="navbar-container">
@@ -1049,7 +1054,8 @@
                         <div class="flex relative h-[38px] mb-5">
                             <!-- select box clone  -->
                             <div
-                                x-data @click="$store.selectedCountry.listToggle()"
+                                x-data
+                                @click="$store.selectedCountry.listToggle()"
                                 class="w-[60px] h-full absolute left-0 top-0 z-10 flex items-center pl-[10px] gap-x-2 cursor-pointer"
                             >
                                 <span
@@ -1085,7 +1091,8 @@
                             <!-- country lists  -->
 
                             <div
-                                x-data x-show="$store.selectedCountry.showList"
+                                x-data
+                                x-show="$store.selectedCountry.showList"
                                 class="w-full absolute left-0 top-[38px] h-[75px] bg-white border border-cusBlack border-t-0 overflow-y-auto hide-scroller"
                             >
                                 <ul x-data="{country: country}">
@@ -1139,7 +1146,9 @@
         <!-- footer -->
         <footer>
             <div class="bg-[#777]">
-                <div class="pt-12 pb-7 max-w-[1220px] md:px-5 md:py-12 md:mx-auto ">
+                <div
+                    class="pt-12 pb-7 max-w-[1220px] md:px-5 md:py-12 md:mx-auto"
+                >
                     <div class="px-3 md:px-0">
                         <h2
                             class="font-DearJane mb-8 text-center md:text-left leading-10 md:leading-11 font-normal text-white text-[24px] md:text-[28px]"
@@ -1149,62 +1158,154 @@
                     </div>
                     <div class="flex flex-col md:flex-row">
                         <div class="md:w-1/4 px-7 md:px-0">
-                            <div class="border-y-[1px] border-[#d2d6dc] md:border-y-0">
-                                <div class="flex flex-row justify-between py-2 md:py-0 md:mt-1">
-                                    <h3 class="font-lato text-base text-white font-bold leading-7">
-                                        ABOUT    
+                            <div
+                                class="border-y-[1px] border-[#d2d6dc] md:border-y-0"
+                            >
+                                <div
+                                    class="flex flex-row justify-between py-2 md:py-0 md:mt-1"
+                                >
+                                    <h3
+                                        class="font-lato text-base text-white font-bold leading-7"
+                                    >
+                                        ABOUT
                                     </h3>
-                                    <span class="md:hidden text-[22px] text-white">
+                                    <span
+                                        class="md:hidden text-[22px] text-white"
+                                    >
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </span>
                                 </div>
                                 <div class="py-2 md:py-0">
                                     <ul>
-                                        <li><a href="" class="font-lato text-base leading-8 text-white font-normal">About Us</a></li>
-                                        <li><a href="" class="font-lato text-base leading-8 text-white font-normal">Careers</a></li>
-                                        <li><a href="" class="font-lato text-base leading-8 text-white font-normal">Wholesale</a></li>
+                                        <li>
+                                            <a
+                                                href=""
+                                                class="font-lato text-base leading-8 text-white font-normal"
+                                                >About Us</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href=""
+                                                class="font-lato text-base leading-8 text-white font-normal"
+                                                >Careers</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href=""
+                                                class="font-lato text-base leading-8 text-white font-normal"
+                                                >Wholesale</a
+                                            >
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="md:w-1/4 px-7 md:px-0">
-                            <div class="border-b-[1px] border-[#d2d6dc] md:border-b-0">
-                                <div class="flex flex-row justify-between py-2 md:py-0 md:mt-1">
-                                    <h3 class="font-lato text-base text-white font-bold leading-7">
+                            <div
+                                class="border-b-[1px] border-[#d2d6dc] md:border-b-0"
+                            >
+                                <div
+                                    class="flex flex-row justify-between py-2 md:py-0 md:mt-1"
+                                >
+                                    <h3
+                                        class="font-lato text-base text-white font-bold leading-7"
+                                    >
                                         QUICK LINKS
                                     </h3>
-                                    <span class="md:hidden text-[22px] text-white">
+                                    <span
+                                        class="md:hidden text-[22px] text-white"
+                                    >
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </span>
                                 </div>
                                 <div class="py-2 md:py-0">
                                     <ul>
-                                        <li><a href="" class="font-lato text-base leading-8 text-white font-normal">My account</a></li>
-                                        <li><a href="" class="font-lato text-base leading-8 text-white font-normal">Find a Retailer</a></li>
-                                        <li><a href="" class="font-lato text-base leading-8 text-white font-normal">Press</a></li>
+                                        <li>
+                                            <a
+                                                href=""
+                                                class="font-lato text-base leading-8 text-white font-normal"
+                                                >My account</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href=""
+                                                class="font-lato text-base leading-8 text-white font-normal"
+                                                >Find a Retailer</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href=""
+                                                class="font-lato text-base leading-8 text-white font-normal"
+                                                >Press</a
+                                            >
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="md:w-2/6 px-7 md:px-0">
-                            <div class="border-b-[1px] border-[#d2d6dc] md:border-b-0">
-                                <div class="flex flex-row justify-between py-2 md:py-0 md:mt-1">
-                                    <h3 class="font-lato text-base text-white font-bold leading-7">
+                            <div
+                                class="border-b-[1px] border-[#d2d6dc] md:border-b-0"
+                            >
+                                <div
+                                    class="flex flex-row justify-between py-2 md:py-0 md:mt-1"
+                                >
+                                    <h3
+                                        class="font-lato text-base text-white font-bold leading-7"
+                                    >
                                         HELP
                                     </h3>
-                                    <span class="md:hidden text-[22px] text-white">
+                                    <span
+                                        class="md:hidden text-[22px] text-white"
+                                    >
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </span>
                                 </div>
-                                <div class="py-2 md:py-0 flex flex-col md:flex-row md:justify-between">
-                                    <ul class=" basis-1/2">
-                                        <li><a href="" class="font-lato text-base leading-8 text-white font-normal">Customer Care</a></li>
-                                        <li><a href="" class="font-lato text-base leading-8 text-white font-normal">Q & A's</a></li>
-                                        <li><a href="" class="font-lato text-base leading-8 text-white font-normal">Orders</a></li>
+                                <div
+                                    class="py-2 md:py-0 flex flex-col md:flex-row md:justify-between"
+                                >
+                                    <ul class="basis-1/2">
+                                        <li>
+                                            <a
+                                                href=""
+                                                class="font-lato text-base leading-8 text-white font-normal"
+                                                >Customer Care</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href=""
+                                                class="font-lato text-base leading-8 text-white font-normal"
+                                                >Q & A's</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href=""
+                                                class="font-lato text-base leading-8 text-white font-normal"
+                                                >Orders</a
+                                            >
+                                        </li>
                                     </ul>
-                                    <ul class=" basis-1/2">
-                                        <li><a href="" class="font-lato text-base leading-8 text-white font-normal">Shipping</a></li>
-                                        <li><a href="" class="font-lato text-base leading-8 text-white font-normal">Contact Us</a></li>
+                                    <ul class="basis-1/2">
+                                        <li>
+                                            <a
+                                                href=""
+                                                class="font-lato text-base leading-8 text-white font-normal"
+                                                >Shipping</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href=""
+                                                class="font-lato text-base leading-8 text-white font-normal"
+                                                >Contact Us</a
+                                            >
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -1227,7 +1328,9 @@
                                             fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
                                         >
-                                            <g clip-path="url(#clip0_1185_2096)">
+                                            <g
+                                                clip-path="url(#clip0_1185_2096)"
+                                            >
                                                 <path
                                                     d="M9.5 0.0244141C4.2535 0.0244141 0 4.27791 0 9.52441C0 13.5512 2.50206 16.9915 6.03621 18.3754C5.9502 17.6248 5.87983 16.4676 6.06749 15.6466C6.23951 14.9038 7.17778 10.924 7.17778 10.924C7.17778 10.924 6.8963 10.3532 6.8963 9.51659C6.8963 8.1952 7.66255 7.21001 8.61646 7.21001C9.42963 7.21001 9.82057 7.81989 9.82057 8.54705C9.82057 9.36022 9.30453 10.58 9.03086 11.7137C8.80411 12.6598 9.50782 13.4339 10.4383 13.4339C12.1272 13.4339 13.4251 11.6512 13.4251 9.08655C13.4251 6.81125 11.7909 5.224 9.45308 5.224C6.74774 5.224 5.16049 7.2491 5.16049 9.34458C5.16049 10.1577 5.47325 11.0335 5.8642 11.5104C5.94239 11.6042 5.95021 11.6903 5.92675 11.7841C5.85638 12.0812 5.69218 12.7302 5.6609 12.8631C5.62181 13.0351 5.52016 13.0742 5.34033 12.9882C4.15185 12.4331 3.40905 10.7051 3.40905 9.30548C3.40905 6.31083 5.58272 3.55857 9.68765 3.55857C12.9794 3.55857 15.544 5.90425 15.544 9.04746C15.544 12.3236 13.4798 14.9586 10.6181 14.9586C9.65638 14.9586 8.74938 14.4582 8.44444 13.8639C8.44444 13.8639 7.96749 15.6779 7.8502 16.1236C7.63909 16.9524 7.06049 17.9845 6.66955 18.6178C7.5609 18.8915 8.49918 19.0401 9.48436 19.0401C14.7309 19.0401 18.9844 14.7866 18.9844 9.54005C19 4.27791 14.7465 0.0244141 9.5 0.0244141Z"
                                                     fill="white"
@@ -1361,14 +1464,22 @@
                 <div class="flex flex-col md:flex-row text-center text-xs">
                     <p class="font-lato text-xs">© 2022 All Rights Reserved</p>
                     <ul class="flex">
-                        <li class=" text-cusBlack "><a href="#" class="font-lato text-xs">&nbsp; |&nbsp; Privacy Policy</a></li>
-                        <li class=" text-cusBlack ">
+                        <li class="text-cusBlack">
+                            <a href="#" class="font-lato text-xs"
+                                >&nbsp; |&nbsp; Privacy Policy</a
+                            >
+                        </li>
+                        <li class="text-cusBlack">
                             <a href="#" class="font-lato text-xs"
                                 >&nbsp; |&nbsp; Affiliate Program&nbsp; |
                                 &nbsp;</a
                             >
                         </li>
-                        <li class=" text-cusBlack "><a href="#" class="font-lato text-xs">Terms & Conditions</a></li>
+                        <li class="text-cusBlack">
+                            <a href="#" class="font-lato text-xs"
+                                >Terms & Conditions</a
+                            >
+                        </li>
                     </ul>
                 </div>
             </div>

@@ -562,6 +562,13 @@ document.addEventListener("alpine:init", () => {
             this.showList = !this.showList;
         },
     });
+    // top alert box 
+    Alpine.store('topBar', {
+        show: true, 
+        showHandler() {
+            this.show = false;
+        }
+    })
 });
 
 var swiper = new Swiper("#collection-slider", {
