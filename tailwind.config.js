@@ -8,6 +8,7 @@ module.exports = {
                 cusBlack: "#333333",
                 p2: "#f9dadf",
                 cusRed: "#d03320",
+                pink: "#f9dadf",
             },
             height: {
                 0.5: "2px",
