@@ -21,6 +21,102 @@
         <script src="//unpkg.com/alpinejs" defer></script>
     </head>
     <body>
+
+        <!-- Alert -->
+        <section class="flex flex-row justify-center items-center h-screen w-full">
+            <div class="w-[780px] flex flex-row">
+                <div class="w-[41.20%]">
+                    <img src="imges/img/alert-img.jpeg" alt="">
+                </div>
+                <div class="flex w-[58.80%] flex-col">
+                    <div class="flex justify-end">
+                        <button class="h-5 w-5 mt-2 mr-2">
+                            <svg role="img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="close-form-1" class="needsclick  kl-private-reset-css-Xuajs1"><title id="close-form-1">Close form 1</title><circle cx="10" cy="10" r="9.5" fill="rgba(180, 187, 195, 0.65)" stroke="#FFFFFF" style="cursor: pointer;"></circle><path d="M6 6L14 14M6 14L14 6L6 14Z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="cursor: pointer;"></path></svg>
+                        </button>
+                    </div>
+                    <form action="" class="pt-5 pb-12 pr-5">
+                        <div class="px-[6px] py-[10px]">
+                            <img src="imges/img/sing-img.png" alt="">
+                        </div>
+                        <div class="py-[10px] pr-[6px] pl-10">
+                            <div class="flex">
+                                <input type="email" placeholder="Enter your email address" class=" h-[38px] grow pl-4 font-lato text-base font-normal border-[1px] border-ash rounded-sm">
+                            </div>
+                        </div>
+                        <div class="py-[10px] pr-[6px] pl-5">
+                            <h5 class="font-lato text-base font-bold mb-[14px] mr-2">
+                                What are you interested in?
+                            </h5>
+                            <div>
+                                <div class="flex flex-row flex-wrap gap-x-8 mb-2">
+                                    <div
+                                        class="flex items-center justify-center gap-x-2"
+                                    >
+                                        <input
+                                            type="radio"
+                                            id="home"
+                                            name="shop"
+                                            value="hone"
+                                            class="accent-black w-5 h-5"
+                                            checked
+                                        />
+                                        <label for="home" class="text-[16px] font-normal font-lato"
+                                            >Home</label
+                                        >
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-center gap-x-2"
+                                    >
+                                        <input
+                                            type="radio"
+                                            id="baby"
+                                            name="shop"
+                                            value="children"
+                                            class="accent-black w-5 h-5"
+                                        />
+                                        <label for="baby" class="text-[16px] font-normal font-lato"
+                                            >Baby & Kids</label
+                                        >
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-center gap-x-2"
+                                    >
+                                        <input
+                                            type="radio"
+                                            id="women"
+                                            name="shop"
+                                            value="women"
+                                            class="accent-black w-5 h-5"
+                                        />
+                                        <label for="women" class="text-[16px] font-normal font-lato"
+                                            >Women</label
+                                        >
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-center gap-x-2"
+                                    >
+                                        <input
+                                            type="radio"
+                                            id="all"
+                                            name="shop"
+                                            value="all"
+                                            class="accent-black w-5 h-5"
+                                        />
+                                        <label for="all" class="text-[16px] font-normal font-lato">All</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-[10px] pl-10 pr[6px] grow">
+                            <button class="w-full bg-pink rounded-[20px] text-base font-bold py-[10px] font-lato tracking-[2px]">
+                                SIGN UP
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
         <!-- Topber -->
         <div x-data x-show="$store.topBar.show" class="top-bar">
             <div class="top-bar-txt flex-grow text-center">
