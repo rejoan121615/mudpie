@@ -132,13 +132,29 @@ document.addEventListener("alpine:init", () => {
             },
         },
         {
-            title: "home", child: {
+            title: "home",
+            child: {
                 imgGallery: {
                     main: {
-                    title: ''
-                }
-            }
-        }},
+                        title: "",
+                    },
+                    child: [
+                        {
+                            title: "",
+                            img: "",
+                        },
+                        {
+                            title: "",
+                            img: "",
+                        },
+                        {
+                            title: "",
+                            img: "",
+                        },
+                    ],
+                },
+            },
+        },
         { title: "women" },
         { title: "seasonal" },
         { title: "gift shop" },
