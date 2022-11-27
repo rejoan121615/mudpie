@@ -53,13 +53,17 @@ svg {
     font-stretch: normal;
 }
 
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     @apply font-didot;
 }
 
 .hide-scroller::-webkit-scrollbar {
-    width: 0!important;
+    width: 0 !important;
     scrollbar-width: none;
 }
 
@@ -77,12 +81,12 @@ h1, h2, h3, h4, h5, h6 {
         @apply inline-block cursor-pointer min-h-[4rem] w-full leading-[1.5rem]
          bg-p2 text-cusBlack uppercase font-lato font-bold py-5 px-[48px]
           text-center relative after:w-[calc(100%_-_1rem)] after:h-[calc(100%_-_1rem)] after:absolute
-         after:border after:border-cusBlack after:left-[0.5rem] after:top-[0.5rem] hover:after:border-2  ;
+         after:border after:border-cusBlack after:left-[0.5rem] after:top-[0.5rem] hover:after:border-2;
     }
 
     .para {
         @apply font-lato text-cusBlack text-[0.875rem] tracking-[0.019rem] 
-         md:text-base  ;
+         md:text-base;
     }
 
     .post-title {
@@ -95,8 +99,30 @@ h1, h2, h3, h4, h5, h6 {
         @apply para mb-[1.75rem] text-center mx-[2.25rem] lg:max-w-[24rem] lg:mx-auto lg:mb-11;
     }
 
-    .swiper-button-prev, .swiper-button-next  {
-        @apply text-cusBlack scale-[0.6] lg:scale-[1] ;
+    .swiper-button-prev,
+    .swiper-button-next {
+        @apply text-cusBlack scale-[0.6] lg:scale-[1];
+    }
+
+    .desktopMenu {
+        @apply absolute z-50 left-0
+         w-[calc(100%_-_80px)] ml-10 bg-white grid 
+         grid-cols-[33.33%_16.66%_auto] p-6 gap-x-8
+         border border-[#dee2e6];
+    }
+
+
+
+    .desktopMenu .itemHeader {
+        @apply font-lato inline-block text-sm
+         leading-10 font-bold
+        uppercase text-cusBlack;
+    }
+
+    .desktopMenu .itemLinks {
+        @apply font-lato inline-block text-sm 
+        leading-[1.85rem] 
+        capitalize text-cusBlack ;
     }
 }
 /* colors  */
@@ -112,14 +138,14 @@ h1, h2, h3, h4, h5, h6 {
      border-b-[1px] border-[#dee2e6];
 }
 .top-bar button {
-    @apply  w-4;
+    @apply w-4;
 }
 .top-bar button svg {
     @apply w-full h-full;
 }
 
 .top-bar-txt {
-    @apply  flex justify-center;
+    @apply flex justify-center;
 }
 
 /* ======== header =======  */
@@ -201,7 +227,6 @@ h1, h2, h3, h4, h5, h6 {
 .desktop-menu-list .menu-item {
     @apply pb-[10px] capitalize border-b-4 border-transparent hover:border-[#333];
 }
-
 
 /* shop the gram section  */
 #gram-grid .grid-wrap {

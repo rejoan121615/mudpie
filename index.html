@@ -52,7 +52,10 @@
                     <!-- desktop nav with brand  -->
                     <div class="menu-wrap">
                         <!-- brand logo  -->
-                        <a  href="#" class="brand-logo hover:lg:scale-[1.05] transition-all duration-300 ">
+                        <a
+                            href="#"
+                            class="brand-logo hover:lg:scale-[1.05] transition-all duration-300"
+                        >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="175"
@@ -99,8 +102,318 @@
                         >
                             <ul class="desktop-menu-list">
                                 <template x-for="item in menuItems">
-                                    <li class="menu-item">
-                                        <a x-text="item" href="#"></a>
+                                    <li class="group ">
+                                        <a
+                                            class="menu-item"
+                                            x-text="item"
+                                            href="#"
+                                        ></a>
+                                        <div class="mt-5 opacity-0 group-hover:opacity-100 duration-300 ">
+                                            <div
+                                                class="desktopMenu "
+                                            >
+                                                <!-- img gallery  -->
+                                                <div class="flex flex-col">
+                                                    <a
+                                                        href="https://www.mudpie.com/category/whats-new/mud-pie-exclusives"
+                                                        class="mb-2"
+                                                    >
+                                                        <figure
+                                                            class="full-width"
+                                                        >
+                                                            <picture
+                                                                ><source
+                                                                    media="(max-width: 767px)"
+                                                                    srcset="
+                                                                        https://platform.mudpie.com/media/wysiwyg/1122_newb2csite_megamenu_whatsnew_header.jpg?quality=80&amp;auto=webp&amp;format=pjpg
+                                                                    "
+                                                                />
+                                                                <img
+                                                                    src="https://platform.mudpie.com/media/wysiwyg/1122_newb2csite_megamenu_whatsnew_header.jpg?quality=80&amp;auto=webp&amp;format=pjpg"
+                                                                    alt="shop mud pie exclusives"
+                                                                />
+                                                            </picture>
+                                                        </figure>
+                                                        <p
+                                                            class="py-2 text-cusBlack font-lato text-xs uppercase font-bold"
+                                                            tabindex="0"
+                                                        >
+                                                            mud pie exclusives
+                                                        </p>
+                                                    </a>
+                                                    <div
+                                                        class="grid grid-cols-3 gap-x-4"
+                                                    >
+                                                        <a
+                                                            href="https://www.mudpie.com/content/influence"
+                                                        >
+                                                            <figure
+                                                                class="full-width"
+                                                            >
+                                                                <picture
+                                                                    ><source
+                                                                        media="(max-width: 767px)"
+                                                                        srcset="
+                                                                            https://platform.mudpie.com/media/wysiwyg/blank/blank.png?quality=80&amp;auto=webp&amp;format=pjpg
+                                                                        " />
+                                                                    <img
+                                                                        src="https://platform.mudpie.com/media/wysiwyg/1122_newb2csite_megamenu_whatsnew_3up1.jpg?quality=80&amp;auto=webp&amp;format=pjpg"
+                                                                        alt="shop influencer favorites"
+                                                                /></picture>
+                                                            </figure>
+                                                            <p
+                                                                class="py-1 text-cusBlack font-lato text-xs uppercase font-bold leading-[24px]"
+                                                                tabindex="0"
+                                                            >
+                                                                Influencer
+                                                                favorites
+                                                            </p>
+                                                        </a>
+
+                                                        <a
+                                                            href="https://www.mudpie.com/category/whats-new/mud-pie-exclusives"
+                                                        >
+                                                            <figure
+                                                                class="full-width"
+                                                            >
+                                                                <picture
+                                                                    ><source
+                                                                        media="(max-width: 767px)"
+                                                                        srcset="
+                                                                            https://platform.mudpie.com/media/wysiwyg/blank/blank.png?quality=80&amp;auto=webp&amp;format=pjpg
+                                                                        " />
+                                                                    <img
+                                                                        src="https://platform.mudpie.com/media/wysiwyg/1022_newb2csite_megamenu_whatsnew_3up2.jpg?quality=80&amp;auto=webp&amp;format=pjpg"
+                                                                        alt="shop s'more accessories and apparel"
+                                                                /></picture>
+                                                            </figure>
+                                                            <p
+                                                                class="py-1 text-cusBlack font-lato text-xs uppercase font-bold leading-[24px]"
+                                                                tabindex="0"
+                                                            >
+                                                                camp fire shop
+                                                            </p>
+                                                        </a>
+                                                        <a
+                                                            href="https://www.mudpie.com/category/whats-new/best-sellers"
+                                                        >
+                                                            <figure
+                                                                class="full-width"
+                                                            >
+                                                                <picture
+                                                                    ><source
+                                                                        media="(max-width: 767px)"
+                                                                        srcset="
+                                                                            https://platform.mudpie.com/media/wysiwyg/blank/blank.png?quality=80&amp;auto=webp&amp;format=pjpg
+                                                                        " />
+                                                                    <img
+                                                                        src="https://platform.mudpie.com/media/wysiwyg/1122_newb2csite_megamenu_whatsnew_3up3.jpg?quality=80&amp;auto=webp&amp;format=pjpg"
+                                                                        alt="shop best sellers"
+                                                                /></picture>
+                                                            </figure>
+                                                            <p
+                                                                class="py-1 text-cusBlack font-lato text-xs uppercase font-bold leading-[24px]"
+                                                                tabindex="0"
+                                                            >
+                                                                best sellers
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!-- item header  -->
+                                                <ul class="">
+                                                    <li class="">
+                                                        <a
+                                                            class="itemHeader"
+                                                            href=""
+                                                            >all</a
+                                                        >
+                                                    </li>
+                                                    <li class="">
+                                                        <a
+                                                            class="itemHeader"
+                                                            href=""
+                                                            >best sellers</a
+                                                        >
+                                                    </li>
+                                                    <li class="">
+                                                        <a
+                                                            class="itemHeader"
+                                                            href=""
+                                                            >mud pie</a
+                                                        >
+                                                    </li>
+                                                    <li class="">
+                                                        <a
+                                                            class="itemHeader"
+                                                            href=""
+                                                            >exclusives</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                                <!-- link list  -->
+                                                <div class="grid grid-cols-2">
+                                                    <!-- items links  -->
+                                                    <ul>
+                                                        <li>
+                                                            <a
+                                                                class="itemHeader"
+                                                                href="/category/whats-new/featured-shops"
+                                                                >Featured
+                                                                Shops</a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                class="itemLinks"
+                                                                href="/category/whats-new/featured-shops/back-to-school"
+                                                                >Back to
+                                                                School</a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                class="itemLinks"
+                                                                href="/category/whats-new/featured-shops/campfire-shop"
+                                                                >Campfire
+                                                                Shop</a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                class="itemLinks"
+                                                                href="/category/whats-new/featured-shops/fiesta-shop"
+                                                                >Fiesta Shop</a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                class="itemLinks"
+                                                                href="/category/whats-new/featured-shops/gnome-shop"
+                                                                >Gnome Shop</a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                class="itemLinks"
+                                                                href="/category/whats-new/featured-shops/leopard-shop"
+                                                                >Leopard Shop</a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                class="itemLinks"
+                                                                href="/category/whats-new/featured-shops/outdoor-entertaining-shop"
+                                                                >Outdoor
+                                                                Entertaining
+                                                                Shop</a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                class="itemLinks"
+                                                                href="/category/whats-new/featured-shops/tailgate-shop"
+                                                                >Tailgate
+                                                                Shop</a
+                                                            >
+                                                        </li>
+                                                    </ul>
+                                                    <!-- items links  -->
+                                                    <ul>
+                                                        <li>
+                                                            <a
+                                                                class="itemHeader"
+                                                                href="/content/influence"
+                                                                >Influencer
+                                                                Favorites</a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                class="itemLinks"
+                                                                href="/category/whats-new/influencer-favorites/alexa-anglin"
+                                                                >Alexa Anglin
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                class="itemLinks"
+                                                                href="/category/whats-new/influencer-favorites/brittney-horton"
+                                                                >Brittney
+                                                                Horton</a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                class="itemLinks"
+                                                                href="/category/whats-new/influencer-favorites/certified-celebrator"
+                                                                >Certified
+                                                                Celebrator</a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                class="itemLinks"
+                                                                href="/category/whats-new/influencer-favorites/eva-shockey"
+                                                                >Eva Shockey</a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                class="itemLinks"
+                                                                href="/category/whats-new/influencer-favorites/jessica-crum"
+                                                                >Jessica Crum</a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                class="itemLinks"
+                                                                href="/category/whats-new/influencer-favorites/loverly-grey"
+                                                                >Loverly Grey</a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                class="itemLinks"
+                                                                href="/category/whats-new/influencer-favorites/madi-nelson"
+                                                                >Madi Nelson</a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                class="itemLinks"
+                                                                href="/category/whats-new/influencer-favorites/mckenna-bleu"
+                                                                >McKenna Bleu</a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                class="itemLinks"
+                                                                href="/category/whats-new/influencer-favorites/mumu-and-macaroons"
+                                                                >Mumu and
+                                                                Macaroons</a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                class="itemLinks"
+                                                                href="/category/whats-new/influencer-favorites/natalie-kennedy"
+                                                                >Natalie
+                                                                Kennedy</a
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                class="itemLinks"
+                                                                href="/category/whats-new/influencer-favorites/simply-darlings"
+                                                                >Simply
+                                                                Darlings</a
+                                                            >
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </li>
                                 </template>
                             </ul>
