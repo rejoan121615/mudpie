@@ -1,4 +1,145 @@
 document.addEventListener("alpine:init", () => {
+    Alpine.store("navigation", [
+        {
+            title: "what's new",
+            child: {
+                imgGallery: {
+                    main: {
+                        title: "mud pie executive",
+                        img: "https://platform.mudpie.com/media/wysiwyg/1122_newb2csite_megamenu_whatsnew_header.jpg?quality=80&auto=webp&format=pjpg",
+                    },
+                    child: [
+                        {
+                            title: "influencer favourite",
+                            img: "https://platform.mudpie.com/media/wysiwyg/1122_newb2csite_megamenu_whatsnew_3up1.jpg?quality=80&auto=webp&format=pjpg",
+                        },
+                        {
+                            title: "camp fire shop",
+                            img: "https://platform.mudpie.com/media/wysiwyg/1022_newb2csite_megamenu_whatsnew_3up2.jpg?quality=80&auto=webp&format=pjpg",
+                        },
+                        {
+                            title: "bese sellers",
+                            img: "https://platform.mudpie.com/media/wysiwyg/1122_newb2csite_megamenu_whatsnew_3up3.jpg?quality=80&auto=webp&format=pjpg",
+                        },
+                    ],
+                },
+                header: [
+                    {
+                        name: "all",
+                        url: "",
+                    },
+                    {
+                        name: "bese sellers",
+                        url: "",
+                    },
+                    {
+                        name: "mud pie exclusives",
+                        url: "",
+                    },
+                ],
+                linkTabs: [
+                    [
+                        [
+                            {
+                                title: "featured shops",
+                                url: "",
+                                links: [
+                                    {
+                                        name: "back to school",
+                                        url: "",
+                                    },
+                                    {
+                                        name: "campfire shop",
+                                        url: "",
+                                    },
+                                    {
+                                        name: "fiesta shop",
+                                        url: "",
+                                    },
+                                    {
+                                        name: "gnome shop",
+                                        url: "",
+                                    },
+                                    {
+                                        name: "leopard shop",
+                                        url: "",
+                                    },
+                                    {
+                                        name: "outdoor entertaininng shop",
+                                        url: "",
+                                    },
+                                    {
+                                        name: "tailgate shop",
+                                        url: "",
+                                    },
+                                ],
+                            },
+                        ],
+                        [
+                            {
+                                title: "influencer favorites",
+                                url: "",
+                                links: [
+                                    {
+                                        name: "alexa anglin",
+                                        url: "",
+                                    },
+                                    {
+                                        name: "brittney horton",
+                                        url: "",
+                                    },
+                                    {
+                                        name: "certified celebrator",
+                                        url: "",
+                                    },
+                                    {
+                                        name: "eva shocky",
+                                        url: "",
+                                    },
+                                    {
+                                        name: "jessica crum",
+                                        url: "",
+                                    },
+                                    {
+                                        name: "loverly grey",
+                                        url: "",
+                                    },
+                                    {
+                                        name: "madi nelson",
+                                        url: "",
+                                    },
+                                    {
+                                        name: "mckenna bleu",
+                                        url: "",
+                                    },
+                                    {
+                                        name: "mumu and macroons",
+                                        url: "",
+                                    },
+                                    {
+                                        name: "natalie kennedy",
+                                        url: "",
+                                    },
+                                    {
+                                        name: "simply darlings",
+                                        url: "",
+                                    },
+                                ],
+                            },
+                        ],
+                    ],
+                ],
+            },
+        },
+        { title: "home", {
+            
+        } },
+        { title: "women" },
+        { title: "seasonal" },
+        { title: "gift shop" },
+        { title: "sale" },
+        { title: "The Christmas Shop" },
+    ]);
     // collection data store
     Alpine.data("shopByCollection", () => [
         {
@@ -562,13 +703,13 @@ document.addEventListener("alpine:init", () => {
             this.showList = !this.showList;
         },
     });
-    // top alert box 
-    Alpine.store('topBar', {
-        show: true, 
+    // top alert box
+    Alpine.store("topBar", {
+        show: true,
         showHandler() {
             this.show = false;
-        }
-    })
+        },
+    });
 });
 
 var swiper = new Swiper("#collection-slider", {
