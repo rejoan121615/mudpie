@@ -136,20 +136,21 @@ document.addEventListener("alpine:init", () => {
             child: {
                 imgGallery: {
                     main: {
-                        title: "",
+                        title: "CHRISTMAS",
+                        img: "https://platform.mudpie.com/media/wysiwyg/1122_newb2csite_megamenu_home_header.jpg?quality=80&auto=webp&format=pjpg"
                     },
                     child: [
                         {
-                            title: "",
-                            img: "",
+                            title: "cheese boards",
+                            img: "https://platform.mudpie.com/media/wysiwyg/1122_newb2csite_megamenu_home_3up1.jpg?quality=80&auto=webp&format=pjpg",
                         },
                         {
-                            title: "",
-                            img: "",
+                            title: "Circa Collection",
+                            img: "https://platform.mudpie.com/media/wysiwyg/1022_newb2csite_megamenu_home_3up2.jpg?quality=80&auto=webp&format=pjpg",
                         },
                         {
-                            title: "",
-                            img: "",
+                            title: "Trending now: seasonal towels",
+                            img: "https://platform.mudpie.com/media/wysiwyg/1022_newb2csite_megamenu_home_3up3.jpg?quality=80&auto=webp&format=pjpg",
                         },
                     ],
                 },
