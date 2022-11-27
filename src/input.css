@@ -104,22 +104,22 @@ h6 {
         @apply text-cusBlack scale-[0.6] lg:scale-[1];
     }
 
-    .desktopMenu {
+    .desktopMenuHover {
         @apply absolute z-50 left-0
          w-[calc(100%_-_80px)] ml-10 bg-white grid 
          grid-cols-[33.33%_16.66%_auto] p-6 gap-x-8
-         border border-[#dee2e6];
+         border border-[#dee2e6] xl:w-full xl:ml-0 ;
     }
 
 
 
-    .desktopMenu .itemHeader {
+    .desktopMenuHover .itemHeader {
         @apply font-lato inline-block text-sm
          leading-10 font-bold
         uppercase text-cusBlack;
     }
 
-    .desktopMenu .itemLinks {
+    .desktopMenuHover .itemLinks {
         @apply font-lato inline-block text-sm 
         leading-[1.85rem] 
         capitalize text-cusBlack ;
