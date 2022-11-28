@@ -3473,9 +3473,9 @@
                 </div>
             </div>
             <!-- load more btn  -->
-            <div class=" text-center mt-5 ">
-                <button class=" w-8 h-8 " >
-                    <img src="./imges/icons/plus.png" alt="plus icons">
+            <div class="text-center mt-5">
+                <button class="w-8 h-8">
+                    <img src="./imges/icons/plus.png" alt="plus icons" />
                 </button>
             </div>
         </section>
@@ -3688,7 +3688,7 @@
                             >
                                 <div
                                     x-on:click=" open = ! open"
-                                    class="flex flex-row justify-between py-2 md:py-0 md:mt-1"
+                                    class=" cursor-pointer flex flex-row justify-between py-2 md:py-0 md:mt-1"
                                 >
                                     <h3
                                         class="font-lato text-base text-white font-bold leading-7"
@@ -3696,7 +3696,8 @@
                                         ABOUT
                                     </h3>
                                     <span
-                                       :class=" open ? ' rotate-180 ' : ' rotate-0 ' "  class=" transition duration-300 md:hidden text-[22px] text-white"
+                                        :class=" open ? ' rotate-180 ' : ' rotate-0 ' "
+                                        class="transition duration-300 md:hidden text-[22px] text-white"
                                     >
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </span>
@@ -3730,10 +3731,12 @@
                         </div>
                         <div class="md:w-1/4 px-7 md:px-0">
                             <div
+                                x-data="{open: false}"
                                 class="border-b-[1px] border-[#d2d6dc] md:border-b-0"
                             >
                                 <div
-                                    class="flex flex-row justify-between py-2 md:py-0 md:mt-1"
+                                    x-on:click=" open = ! open"
+                                    class=" cursor-pointer flex flex-row justify-between py-2 md:py-0 md:mt-1"
                                 >
                                     <h3
                                         class="font-lato text-base text-white font-bold leading-7"
@@ -3741,12 +3744,13 @@
                                         QUICK LINKS
                                     </h3>
                                     <span
-                                        class="md:hidden text-[22px] text-white"
+                                        :class=" open ? ' rotate-180 ' : ' rotate-0 ' "
+                                        class=" transition duration-300 md:hidden text-[22px] text-white"
                                     >
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </span>
                                 </div>
-                                <div class="py-2 md:py-0">
+                                <div x-show="open" class="py-2 md:py-0">
                                     <ul>
                                         <li>
                                             <a
@@ -3775,10 +3779,11 @@
                         </div>
                         <div class="md:w-2/6 px-7 md:px-0">
                             <div
+                                x-data="{open: false}"
                                 class="border-b-[1px] border-[#d2d6dc] md:border-b-0"
                             >
-                                <div
-                                    class="flex flex-row justify-between py-2 md:py-0 md:mt-1"
+                                <div  x-on:click=" open = ! open"
+                                    class=" cursor-pointer flex flex-row justify-between py-2 md:py-0 md:mt-1"
                                 >
                                     <h3
                                         class="font-lato text-base text-white font-bold leading-7"
@@ -3786,12 +3791,14 @@
                                         HELP
                                     </h3>
                                     <span
-                                        class="md:hidden text-[22px] text-white"
+                                       :class=" open ? ' rotate-180 ' : ' rotate-0 ' "
+                                        class="transition duration-300 md:hidden text-[22px] text-white"
                                     >
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </span>
                                 </div>
                                 <div
+                                    x-show="open"
                                     class="py-2 md:py-0 flex flex-col md:flex-row md:justify-between"
                                 >
                                     <ul class="basis-1/2">
