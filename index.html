@@ -3683,9 +3683,11 @@
                     <div class="flex flex-col md:flex-row">
                         <div class="md:w-1/4 px-7 md:px-0">
                             <div
+                                x-data="{open: false}"
                                 class="border-y-[1px] border-[#d2d6dc] md:border-y-0"
                             >
                                 <div
+                                    x-on:click=" open = ! open"
                                     class="flex flex-row justify-between py-2 md:py-0 md:mt-1"
                                 >
                                     <h3
@@ -3694,12 +3696,12 @@
                                         ABOUT
                                     </h3>
                                     <span
-                                        class="md:hidden text-[22px] text-white"
+                                       :class=" open ? ' rotate-180 ' : ' rotate-0 ' "  class=" transition duration-300 md:hidden text-[22px] text-white"
                                     >
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </span>
                                 </div>
-                                <div class="py-2 md:py-0">
+                                <div x-show="open" class="py-2 md:py-0">
                                     <ul>
                                         <li>
                                             <a
