@@ -69,6 +69,9 @@ h6 {
 
 /* global component styles ------------------------------------- */
 @layer components {
+    .sec-header {
+        @apply pb-10 pt-16;
+    }
     .pre-header {
         @apply font-DearJane text-cusBlack text-xl
      leading-8 mb-5 px-4 lowercase relative z-10
