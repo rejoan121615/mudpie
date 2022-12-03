@@ -2657,6 +2657,39 @@
                 </div>
             </div>
         </section>
+        <!-- article posts  -->
+         <section class="mb-8 lg:mb-[52px]">
+            <div class="content__container">
+                <div
+                    x-data="{ trending: trending}"
+                    class="grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-y-0 md:mx-10 md:gap-x-8"
+                >
+                    <template x-for=" post in trending">
+                        <div
+                            class="relative h-[max-content] after:border-4 after:border-p2 after:absolute after:left-4 after:right-4 after:top-4 after:bottom-[30px]"
+                        >
+                            <img
+                                :src="post.img"
+                                alt="trending post img"
+                                class="min-h-[14.25rem] mb-[1.5rem]"
+                            />
+                            <h1 class="post-title" x-text="post.title"></h1>
+                            <p x-text="post.des" class="post-des"></p>
+                            <div
+                                class="mx-[2.25rem] relative z-20 lg:max-w-[18.5rem] lg:mx-auto"
+                            >
+                                <a
+                                    x-text="post.btn"
+                                    href=""
+                                    class="btn-primary block"
+                                ></a>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+           
+        </section>
         <!-- js files  -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script src="./js/script.js"></script>
