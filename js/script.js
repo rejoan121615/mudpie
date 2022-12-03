@@ -588,6 +588,26 @@ document.addEventListener("alpine:init", () => {
             img: "https://platform.mudpie.com/media/wysiwyg/Home/1122_newb2csite_home_category_linens.jpg",
         },
     ]);
+    // product page 
+    Alpine.store("product", {
+        title: "REINDEER EVERYTHING TRAY",
+        price: 16.5,
+        sku: "48700017D",
+        imgList: [
+            "https://platform.mudpie.com/media/catalog/product/4/8/48700017d.jpg",
+            "https://platform.mudpie.com/media/catalog/product/4/8/48700017s.jpg",
+        ],
+        selectedImg: 'https://platform.mudpie.com/media/catalog/product/4/8/48700017d.jpg',
+        quantity: 1,
+        info: "It's the happiest season of all - get ready with our Reindeer everything tray. The small ceramic tray features a detailed image of a reindeer in the center. The tray also features the words \"it's the happiest seasonal of all\". This tray can be used for serving butter or your favorite Christmas dishes!",
+        details: {
+            dimention: '4" x 9 1/4"',
+            material: "dolomite",
+            care: "dishwasher safe",
+            instructions: "microwave safe",
+            upc: "718540716045",
+        },
+    });
 });
 
 window.onload = function () {
@@ -704,5 +724,12 @@ window.onload = function () {
             },
         },
     });
-
+    new Swiper(".product__details--slider", {
+        slidesPerView: 1,
+        createElements: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
 };

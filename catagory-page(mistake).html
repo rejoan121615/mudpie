@@ -2571,17 +2571,196 @@
             <div class="content__container">
                 <div class="breadcrumbs">
                     <a href="" class="link">Home</a>
-                    <a href="" class="link">Home</a>
-                    <a href="" class="link">Decor</a>
-                    <span>Bathroom Essentials</span>
+                    <span>Home</span>
                 </div>
             </div>
+            <div class="content__container pt-5">
+                <div>
+                    <figure class="cms-hero-banner-image">
+                        <a
+                            href="https://www.mudpie.com/category/home/new-arrivals"
+                            ><picture
+                                ><source
+                                    media="(max-width: 767px)"
+                                    srcset="
+                                        https://platform.mudpie.com/media/wysiwyg/1022_newb2csite_hero_home_MOBILE.jpg?quality=80&amp;auto=webp&amp;format=pjpg
+                                    " />
+                                <img
+                                    src="https://platform.mudpie.com/media/wysiwyg/1022_newb2csite_hero_home.jpg?quality=80&amp;auto=webp&amp;format=pjpg"
+                                    alt="shop home new arrivals" /></picture
+                        ></a>
+                    </figure>
+                    <!-- section discription  -->
+                    <div
+                        class="relative z-20 -mt-[128px] mx-3 border-[4px] border-s3 flex flex-wrap sm:-mt-40 md:max-w-[80%] md:mx-auto md:-mt-32 lg:-mt-[208px]"
+                    >
+                        <div
+                            class="w-full m-2 pt-8 pb-9 px-2 bg-s3 flex items-stretch flex-col justify-start md:pt-[60px] md:pb-16 md:m-3"
+                        >
+                            <h1
+                                class="text-cusBlack text-center font-didot text-[2rem] leading-[2.375rem] mb-5 uppercase md:text-[42px] md:leading-[46px] md:mb-6"
+                            >
+                                Home for the Holidays
+                            </h1>
+                            <p
+                                class="px-4 text-cusBlack font-lato text-[1rem] leading-[1.75rem] text-center tracking-[0.019rem] mb-8 md:text-lg md:leading-8 md:mb-14"
+                            >
+                                Make your home merry with new arrivals sure to
+                                bring good tidings & cheer.
+                            </p>
+
+                            <a
+                                href=""
+                                class="btn-primary--fixed-width"
+                                x-text="post.btn"
+                                >shop new arrivals</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- all catagory listshop best sellers shop the gram  -->
+        <section class="py-7">
+            <!-- slider  -->
             <div class="content__container">
-                <div class=" py-[30px] ">
-                  <div class=" bg-[#ededed] py-[10px] ">
-                    <h2 class=" font-didot text-[1.75rem] leading-[2.125rem] uppercase text-center text-cusBlack ">Bathroom Accessories</h2>
-                    <p class=" font-lato text-base text-center text-cusBlack ">Our bathroom accessories blend perfectly with any home decor style. Spruce up your powder rooms with bathroom accessories that are perfect for visitors.</p>
-                  </div>
+                <div
+                    id="catagory__page__collection"
+                    class="swiper md:mx-8"
+                    x-data="{ collection: catagoryPageCollection}"
+                >
+                    <div
+                        class="swiper-button-next hidden md:block text-cusBlack lg:hidden"
+                    ></div>
+                    <div class="swiper-wrapper">
+                        <template x-for="item in collection">
+                            <div
+                                class="swiper-slide p-[14px] cursor-pointer lg:p-[0.875rem] outline-none after:opacity-0 hover:after:opacity-100 hover:relative block z-10 after:border-4 after:border-p2 after:absolute after:top-[0.25rem] after:left-[0.25rem] after:right-[0.25rem] after:bottom-[1rem] after:-z-10 lg:after:bottom-[1.5rem]"
+                            >
+                                <div>
+                                    <img
+                                        :src="item.img"
+                                        alt=""
+                                        class="w-full mb-3"
+                                    />
+                                    <h2
+                                        x-text="item.name"
+                                        class="font-lato uppercase font-bold table mx-auto bg-white px-2 text-cusBlack text-[0.75rem] leading-[0.875rem] lg:text-[1.25rem] lg:leading-[1.75rem]"
+                                    ></h2>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <div
+                        class="swiper-button-prev hidden md:block text-cusBlack lg:hidden"
+                    ></div>
+                </div>
+            </div>
+        </section>
+        <!-- article posts  -->
+        <section class="mb-8 lg:mb-[52px]">
+            <div class="content__container">
+                <div
+                    x-data="{ trending: trending}"
+                    class="grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-y-0 md:mx-10 md:gap-x-8"
+                >
+                    <template x-for=" post in trending">
+                        <div
+                            class="relative h-[max-content] after:border-4 after:border-p2 after:absolute after:left-4 after:right-4 after:top-4 after:bottom-[30px]"
+                        >
+                            <img
+                                :src="post.img"
+                                alt="trending post img"
+                                class="min-h-[14.25rem] mb-[1.5rem]"
+                            />
+                            <h1 class="post-title" x-text="post.title"></h1>
+                            <p x-text="post.des" class="post-des"></p>
+                            <div
+                                class="mx-[2.25rem] relative z-20 lg:max-w-[18.5rem] lg:mx-auto"
+                            >
+                                <a
+                                    x-text="post.btn"
+                                    href=""
+                                    class="btn-primary block"
+                                ></a>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </section>
+        <!-- shop best sellers  -->
+        <section>
+            <div class="content__container">
+                <div class="container-inner">
+                    <div class="sec-header">
+                        <h2 class="pre-header">best sellers</h2>
+                    </div>
+                </div>
+                <div
+                    id="best_seller_slider"
+                    x-data="{product: shopBestSeller}"
+                    class="swiper"
+                >
+                    <div class="swiper-wrapper">
+                        <template x-for="item in product">
+                            <div class="swiper-slide">
+                                <img :src="item.img" alt="post image" />
+                                <p
+                                    x-text="item.title"
+                                    class="para text-xs m-2 text-center md:text-base"
+                                ></p>
+                                <p
+                                    x-text="item.price"
+                                    class="para text-center font-bold text-xs md:text-base"
+                                ></p>
+                            </div>
+                        </template>
+                    </div>
+                    <div class="swiper-button-prev hidden md:block"></div>
+                    <div class="swiper-button-next hidden md:block"></div>
+                </div>
+            </div>
+        </section>
+        <!-- shop by collection  -->
+        <section class=" my-16 ">
+            <div class="content__container">
+                <div class="container-inner">
+                    <div class="mb-">
+                        <h2 class="pre-header">shop by collection</h2>
+                    </div>
+                </div>
+                <!-- slider  -->
+                <div
+                    id="catagory__page__collection__list"
+                    class="swiper"
+                    x-data="{ collection: shopByCollection}"
+                >
+                    <div
+                        class="swiper-button-next hidden md:block text-cusBlack"
+                    ></div>
+                    <div class="swiper-wrapper">
+                        <template x-for="item in collection">
+                            <div
+                                class="swiper-slide p-[14px] cursor-pointer lg:p-[0.875rem] outline-none after:opacity-0 hover:after:opacity-100 hover:relative block z-10 after:border-4 after:border-p2 after:absolute after:top-[0.25rem] after:left-[0.25rem] after:right-[0.25rem] after:bottom-[1rem] after:-z-10 lg:after:bottom-[1.5rem]"
+                            >
+                                <div>
+                                    <img
+                                        :src="item.img"
+                                        alt=""
+                                        class="w-full mb-3"
+                                    />
+                                    <h2
+                                        x-text="item.name"
+                                        class="font-lato uppercase font-bold table mx-auto bg-white px-2 text-cusBlack text-[0.75rem] leading-[0.875rem] lg:text-[1.25rem] lg:leading-[1.75rem]"
+                                    ></h2>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <div
+                        class="swiper-button-prev hidden md:block text-cusBlack"
+                    ></div>
                 </div>
             </div>
         </section>

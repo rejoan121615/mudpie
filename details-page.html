@@ -21,6 +21,170 @@
         <script src="//unpkg.com/alpinejs" defer></script>
     </head>
     <body>
+        <!-- Alert -->
+        <section
+            class="hidden flex flex-row justify-center items-center h-screen w-full"
+        >
+            <div class="w-[780px] flex flex-row">
+                <div class="w-[41.20%]">
+                    <img src="imges/img/alert-img.jpeg" alt="" />
+                </div>
+                <div class="flex w-[58.80%] flex-col">
+                    <div class="flex justify-end">
+                        <button class="h-5 w-5 mt-2 mr-2">
+                            <svg
+                                role="img"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                aria-labelledby="close-form-1"
+                                class="needsclick kl-private-reset-css-Xuajs1"
+                            >
+                                <title id="close-form-1">Close form 1</title>
+                                <circle
+                                    cx="10"
+                                    cy="10"
+                                    r="9.5"
+                                    fill="rgba(180, 187, 195, 0.65)"
+                                    stroke="#FFFFFF"
+                                    style="cursor: pointer"
+                                ></circle>
+                                <path
+                                    d="M6 6L14 14M6 14L14 6L6 14Z"
+                                    stroke="#FFFFFF"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    style="cursor: pointer"
+                                ></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <form action="" class="pt-5 pb-12 pr-5">
+                        <div class="px-[6px] py-[10px]">
+                            <img src="imges/img/sing-img.png" alt="" />
+                        </div>
+                        <div class="py-[10px] pr-[6px] pl-10">
+                            <div class="flex">
+                                <input
+                                    type="email"
+                                    placeholder="Enter your email address"
+                                    class="h-[38px] grow pl-4 font-lato text-base font-normal border-[1px] border-ash rounded-sm"
+                                />
+                            </div>
+                        </div>
+                        <div class="py-[10px] pr-[6px] pl-5">
+                            <h5
+                                class="font-lato text-base font-bold mb-[14px] mr-2"
+                            >
+                                What are you interested in?
+                            </h5>
+                            <div>
+                                <div
+                                    class="flex flex-row flex-wrap gap-x-8 mb-2"
+                                >
+                                    <div
+                                        class="flex items-center justify-center gap-x-2"
+                                    >
+                                        <input
+                                            type="radio"
+                                            id="home"
+                                            name="shop"
+                                            value="hone"
+                                            class="accent-black w-5 h-5"
+                                            checked
+                                        />
+                                        <label
+                                            for="home"
+                                            class="text-[16px] font-normal font-lato"
+                                            >Home</label
+                                        >
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-center gap-x-2"
+                                    >
+                                        <input
+                                            type="radio"
+                                            id="baby"
+                                            name="shop"
+                                            value="children"
+                                            class="accent-black w-5 h-5"
+                                        />
+                                        <label
+                                            for="baby"
+                                            class="text-[16px] font-normal font-lato"
+                                            >Baby & Kids</label
+                                        >
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-center gap-x-2"
+                                    >
+                                        <input
+                                            type="radio"
+                                            id="women"
+                                            name="shop"
+                                            value="women"
+                                            class="accent-black w-5 h-5"
+                                        />
+                                        <label
+                                            for="women"
+                                            class="text-[16px] font-normal font-lato"
+                                            >Women</label
+                                        >
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-center gap-x-2"
+                                    >
+                                        <input
+                                            type="radio"
+                                            id="all"
+                                            name="shop"
+                                            value="all"
+                                            class="accent-black w-5 h-5"
+                                        />
+                                        <label
+                                            for="all"
+                                            class="text-[16px] font-normal font-lato"
+                                            >All</label
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-[10px] pl-10 pr[6px] grow">
+                            <button
+                                class="w-full bg-pink rounded-[20px] text-base font-bold py-[10px] font-lato tracking-[2px]"
+                            >
+                                SIGN UP
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Topber -->
+        <div x-data x-show="$store.topBar.show" class="top-bar">
+            <div class="top-bar-txt flex-grow text-center">
+                <a href="">Free Shipping on Orders $75+</a>
+            </div>
+            <button x-data @click="$store.topBar.showHandler()">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 5 6"
+                >
+                    <path
+                        fill="#333"
+                        fill-rule="evenodd"
+                        d="M4.877.813a.408.408 0 00-.594 0L2.491 2.699.725.84a.403.403 0 00-.59 0 .458.458 0 000 .623l1.766 1.856L.123 5.192a.462.462 0 000 .627c.164.171.43.171.594 0l1.779-1.873 1.766 1.86a.403.403 0 00.59 0 .458.458 0 000-.623L3.086 3.327 4.877 1.44a.462.462 0 000-.627z"
+                        clip-rule="evenodd"
+                    ></path>
+                </svg>
+            </button>
+        </div>
         <!-- header  -->
         <header class="navbar">
             <div class="navbar-container">
@@ -77,7 +241,7 @@
                             </svg>
                         </a>
                         <!-- navbar  -->
-                        <div class="desktop-menu hidden">
+                        <div class="desktop-menu">
                             <ul class="desktop-menu-list">
                                 <li class="group">
                                     <a class="menu-item" href="#">What's new</a>
@@ -2566,25 +2730,37 @@
                 <div class="navbar-mobile-search"></div>
             </div>
         </header>
-        <!-- catagory discription  -->
-        <section class="mt-5 mb-8">
-            <div class="content__container">
-                <div class="breadcrumbs">
-                    <a href="" class="link">Home</a>
-                    <a href="" class="link">Home</a>
-                    <a href="" class="link">Decor</a>
-                    <span>Bathroom Essentials</span>
-                </div>
+        <!-- product details section  -->
+        <section>
+          <div class=" px-3 ">
+            <div class="breadcrumbs pt-2 pb-4 ">
+              <a href="" class="link">Home</a>
+              <a href="" class="link">Home</a>
+              <span href="">Reindeer Everything Tray</span>
             </div>
-            <div class="content__container">
-                <div class=" py-[30px] ">
-                  <div class=" bg-[#ededed] py-[10px] ">
-                    <h2 class=" font-didot text-[1.75rem] leading-[2.125rem] uppercase text-center text-cusBlack ">Bathroom Accessories</h2>
-                    <p class=" font-lato text-base text-center text-cusBlack ">Our bathroom accessories blend perfectly with any home decor style. Spruce up your powder rooms with bathroom accessories that are perfect for visitors.</p>
-                  </div>
+            <!-- product details  -->
+            <div class=" product__details">
+              <div class="product__details--gallery">
+                <div class="swiper product__details--slider">
+                    <div class="swiper-wrapper">
+                        <template x-data x-for="img in $store.product.imgList">
+                            <div class="swiper-slide">
+                                <img  :src="img" alt="">
+                            </div>
+                        </template>  
+                    </div>
+                    <div class="swiper-button-next md:hidden "></div>
+                    <div class="swiper-button-prev md:hidden "></div>
                 </div>
+              </div>
+              <div class="product__details--description">
+                <h1 x-data x-text="$store.product.title" class=" font-didot text-[2rem] leading-[2.375rem] mb-3
+                 -tracking-[0.02rem] text-cusBlack "></h1>
+              </div>
             </div>
+          </div>
         </section>
+        
         <!-- sign form -->
         <section
             class="flex flex-row justify-center bg-[rgba(255, 255, 255, 0)]"
@@ -2788,7 +2964,7 @@
                     <div class="flex flex-col md:flex-row">
                         <div class="md:w-1/4 px-7 md:px-0">
                             <div
-                                x-data="{open: window.innerWidth > 640 ? true: false}"
+                                x-data="{open: false}"
                                 class="border-y-[1px] border-[#d2d6dc] md:border-y-0"
                             >
                                 <div
@@ -2836,7 +3012,7 @@
                         </div>
                         <div class="md:w-1/4 px-7 md:px-0">
                             <div
-                                x-data="{open: window.innerWidth > 640 ? true: false}"
+                                x-data="{open: false}"
                                 class="border-b-[1px] border-[#d2d6dc] md:border-b-0"
                             >
                                 <div
@@ -2884,7 +3060,7 @@
                         </div>
                         <div class="md:w-2/6 px-7 md:px-0">
                             <div
-                                x-data="{open: window.innerWidth > 640 ? true: false}"
+                                x-data="{open: false}"
                                 class="border-b-[1px] border-[#d2d6dc] md:border-b-0"
                             >
                                 <div  x-on:click=" open = ! open"
@@ -3122,6 +3298,7 @@
                 </div>
             </div>
         </footer>
+
         <!-- js files  -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script src="./js/script.js"></script>
