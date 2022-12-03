@@ -9,6 +9,8 @@ module.exports = {
                 p2: "#f9dadf",
                 cusRed: "#d03320",
                 pink: "#f9dadf",
+                s2: "#777",
+                s3: "#ededed",
             },
             height: {
                 0.5: "2px",

@@ -69,6 +69,22 @@ h6 {
 
 /* global component styles ------------------------------------- */
 @layer components {
+    .content__container {
+        @apply px-5 mx-auto md:px-10 xl:px-0 xl:max-w-[1280px];
+    }
+    /* breadcrumbs style  */
+    .breadcrumbs {
+        @apply font-lato text-sm text-s2;
+    }
+    .breadcrumbs .link {
+        @apply relative after:content-['/'] after:absolute after:-right-2 mr-2
+        ;
+    }
+
+    .breadcrumbs span {
+        @apply font-bold;
+    }
+
     .sec-header {
         @apply pb-10 pt-16;
     }
@@ -81,9 +97,16 @@ h6 {
     }
 
     .btn-primary {
-        @apply inline-block cursor-pointer min-h-[4rem] w-full leading-[1.5rem]
-         bg-p2 text-cusBlack uppercase font-lato font-bold py-5 px-[48px]
+        @apply inline-block cursor-pointer min-h-[4rem] w-full 
+         bg-p2 text-cusBlack uppercase font-lato text-[0.875rem] leading-[1.5rem] font-bold py-5 px-[48px]
           text-center relative after:w-[calc(100%_-_1rem)] after:h-[calc(100%_-_1rem)] after:absolute
+         after:border after:border-cusBlack after:left-[0.5rem] after:top-[0.5rem] hover:after:border-2;
+    }
+
+    .btn-primary--fixed-width {
+         @apply inline-block cursor-pointer min-h-[4rem] w-full 
+         bg-p2 text-cusBlack uppercase font-lato text-[0.875rem] leading-[1.5rem] font-bold py-5 px-[48px]
+          text-center relative max-w-[260px] mx-auto  md:max-w-[424px]  after:w-[calc(100%_-_1rem)] after:h-[calc(100%_-_1rem)] after:absolute
          after:border after:border-cusBlack after:left-[0.5rem] after:top-[0.5rem] hover:after:border-2;
     }
 
@@ -108,7 +131,7 @@ h6 {
     }
 
     .desktopMenuHover {
-        @apply absolute z-50 left-0
+        @apply hidden absolute z-50 left-0
          w-[calc(100%_-_80px)] ml-10 bg-white grid 
          grid-cols-[33.33%_16.66%_auto] p-6 gap-x-8
          border border-[#dee2e6] xl:w-full xl:ml-0 ;
