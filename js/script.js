@@ -663,4 +663,46 @@ window.onload = function () {
             },
         },
     });
+    new Swiper("#catagory__page__collection", {
+        slidesPerView: 2.2,
+        createElements: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 2.3,
+                navigation: false,
+            },
+            650: {
+                slidesPerView: 3.3,
+            },
+            1200: {
+                slidesPerView: 4.3,
+            },
+        },
+    });
+    new Swiper("#catagory__page__collection__list", {
+        slidesPerView: 2.2,
+        createElements: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 2.3,
+                navigation: false,
+            },
+            650: {
+                slidesPerView: 3.5,
+                loopAdditionalSlides: 100,
+            },
+            1200: {
+                slidesPerView: 4.3,
+            },
+        },
+    });
+
 };
