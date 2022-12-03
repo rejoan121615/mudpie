@@ -569,80 +569,98 @@ document.addEventListener("alpine:init", () => {
             this.show = false;
         },
     });
+    // catagory data on catagory page
+    Alpine.data("catagoryPageCollection", () => [
+        {
+            name: "Decor",
+            img: "https://platform.mudpie.com/media/wysiwyg/Home/1122_newb2csite_home_category_home.jpg",
+        },
+        {
+            name: "entertaining",
+            img: "https://platform.mudpie.com/media/wysiwyg/Home/1122_newb2csite_home_category_entertaining.jpg",
+        },
+        {
+            name: "kitchen",
+            img: "https://platform.mudpie.com/media/wysiwyg/Home/1122_newb2csite_home_category_kitchen.jpg",
+        },
+        {
+            name: "linens",
+            img: "https://platform.mudpie.com/media/wysiwyg/Home/1122_newb2csite_home_category_linens.jpg",
+        },
+    ]);
 });
 
-var swiper = new Swiper("#collection-slider", {
-    slidesPerView: 3.2,
-    createElements: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        // when window width is >= 320px
-        320: {
-            slidesPerView: 2.3,
-            navigation: false,
+window.onload = function () {
+   new Swiper("#collection-slider", {
+        slidesPerView: 2.2,
+        createElements: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
-        // when window width is >= 480px
-        650: {
-            slidesPerView: 3.3,
-        },
-        1200: {
-            slidesPerView: 4.3,
-        },
-    },
-});
-
-var swiper = new Swiper("#whats_new_slider", {
-    slidesPerView: 1,
-    createElements: true,
-    navigation: {
-        nextEl: ".large-next",
-        prevEl: ".large-prev",
-    },
-    breakpoints: {
-        // when window width is >= 320px
-        320: {
-            slidesPerView: 1,
-            navigation: false,
-            navigation: {
-                nextEl: ".sm-prev",
-                prevEl: ".sm-next",
+        breakpoints: {
+            320: {
+                slidesPerView: 2.3,
+                navigation: false,
+            },
+            650: {
+                slidesPerView: 3.3,
+            },
+            1200: {
+                slidesPerView: 4.3,
             },
         },
-        // when window width is >= 480px
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-            navigation: {
-                nextEl: ".large-next",
-                prevEl: ".large-prev",
+    });
+
+    new Swiper("#whats_new_slider", {
+        slidesPerView: 1,
+        createElements: true,
+        navigation: {
+            nextEl: ".large-next",
+            prevEl: ".large-prev",
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                navigation: false,
+                navigation: {
+                    nextEl: ".sm-prev",
+                    prevEl: ".sm-next",
+                },
+            },
+            // when window width is >= 480px
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: ".large-next",
+                    prevEl: ".large-prev",
+                },
+            },
+            1025: {
+                slidesPerView: 3,
+                spaceBetween: 15,
             },
         },
-        1025: {
-            slidesPerView: 3,
-            spaceBetween: 15,
+    });
+    new Swiper("#best_seller_slider", {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
-    },
-});
-
-var swiper = new Swiper("#best_seller_slider", {
-    slidesPerView: 2,
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 2,
-            spaceBetween: 20,
+        breakpoints: {
+            320: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+            },
         },
-        768: {
-            slidesPerView: 4,
-            spaceBetween: 10,
-        },
-    },
-});
+    });
+};

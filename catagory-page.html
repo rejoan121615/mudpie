@@ -2567,7 +2567,7 @@
             </div>
         </header>
         <!-- catagory discription  -->
-        <section class="mt-5">
+        <section class="mt-5 mb-8 ">
             <div class="content__container">
                 <div class="breadcrumbs">
                     <a href="" class="link">Home</a>
@@ -2592,31 +2592,68 @@
                     </figure>
                     <!-- section discription  -->
                     <div
-                        class="relative z-20 -mt-[128px] mx-3 
-                        border-[4px] border-s3 flex flex-wrap sm:-mt-40
-                        md:max-w-[80%] md:mx-auto md:-mt-32 lg:-mt-[208px] "
+                        class="relative z-20 -mt-[128px] mx-3 border-[4px] border-s3 flex flex-wrap sm:-mt-40 md:max-w-[80%] md:mx-auto md:-mt-32 lg:-mt-[208px]"
                     >
                         <div
-                            class="w-full m-2 pt-8 pb-9 px-2 bg-s3 flex
-                             items-stretch flex-col justify-start
-                             md:pt-[60px] md:pb-16 md:m-3 "
+                            class="w-full m-2 pt-8 pb-9 px-2 bg-s3 flex items-stretch flex-col justify-start md:pt-[60px] md:pb-16 md:m-3"
                         >
                             <h1
-                                class=" text-cusBlack text-center 
-                                font-didot text-[2rem] leading-[2.375rem] mb-5 uppercase
-                                 md:text-[42px] md:leading-[46px] md:mb-6 "
+                                class="text-cusBlack text-center font-didot text-[2rem] leading-[2.375rem] mb-5 uppercase md:text-[42px] md:leading-[46px] md:mb-6"
                             >
                                 Home for the Holidays
                             </h1>
-                            <p class=" px-4 text-cusBlack font-lato text-[1rem] leading-[1.75rem] text-center
-                             tracking-[0.019rem] mb-8 md:text-lg md:leading-8 md:mb-14  ">
+                            <p
+                                class="px-4 text-cusBlack font-lato text-[1rem] leading-[1.75rem] text-center tracking-[0.019rem] mb-8 md:text-lg md:leading-8 md:mb-14"
+                            >
                                 Make your home merry with new arrivals sure to
                                 bring good tidings & cheer.
                             </p>
 
-                            <a href="" class="btn-primary--fixed-width" x-text="post.btn">shop new arrivals</a>
+                            <a
+                                href=""
+                                class="btn-primary--fixed-width"
+                                x-text="post.btn"
+                                >shop new arrivals</a
+                            >
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <!-- all catagory listshop best sellers shop the gram  -->
+        <section class=" py-7 ">
+            <!-- slider  -->
+            <div class="content__container">
+                <div
+                    id="collection-slider"
+                    class="swiper md:mx-8 "
+                    x-data="{ collection: catagoryPageCollection}" 
+                >
+                    <div
+                        class="swiper-button-next hidden md:block text-cusBlack lg:hidden"
+                    ></div>
+                    <div class="swiper-wrapper">
+                        <template x-for="item in collection">
+                            <div
+                                class="swiper-slide p-[14px] cursor-pointer lg:p-[0.875rem] outline-none after:opacity-0 hover:after:opacity-100 hover:relative block z-10 after:border-4 after:border-p2 after:absolute after:top-[0.25rem] after:left-[0.25rem] after:right-[0.25rem] after:bottom-[1rem] after:-z-10 lg:after:bottom-[1.5rem]"
+                            >
+                                <div>
+                                    <img
+                                        :src="item.img"
+                                        alt=""
+                                        class="w-full mb-3"
+                                    />
+                                    <h2
+                                        x-text="item.name"
+                                        class="font-lato uppercase font-bold table mx-auto bg-white px-2 text-cusBlack text-[0.75rem] leading-[0.875rem] lg:text-[1.25rem] lg:leading-[1.75rem]"
+                                    ></h2>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <div
+                        class="swiper-button-prev hidden md:block text-cusBlack lg:hidden"
+                    ></div>
                 </div>
             </div>
         </section>
