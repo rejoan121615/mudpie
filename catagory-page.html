@@ -2690,6 +2690,39 @@
             </div>
            
         </section>
+        <!-- shop best sellers  -->
+        <section>
+            <div class="content__container">
+                <div class="container-inner">
+                    <div class="sec-header">
+                        <h2 class="pre-header">shop best sellers</h2>
+                    </div>
+                </div>
+                <div
+                id="best_seller_slider"
+                x-data="{product: shopBestSeller}"
+                class="swiper"
+                >
+                    <div class="swiper-wrapper">
+                        <template x-for="item in product">
+                            <div class="swiper-slide">
+                                <img :src="item.img" alt="post image" />
+                                <p
+                                    x-text="item.title"
+                                    class="para text-xs m-2 text-center md:text-base"
+                                ></p>
+                                <p
+                                    x-text="item.price"
+                                    class="para text-center font-bold text-xs md:text-base"
+                                ></p>
+                            </div>
+                        </template>
+                    </div>
+                    <div class="swiper-button-prev hidden md:block"></div>
+                    <div class="swiper-button-next hidden md:block"></div>
+                </div>
+            </div>
+        </section>
         <!-- js files  -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script src="./js/script.js"></script>
