@@ -2577,11 +2577,70 @@
                 </div>
             </div>
             <div class="content__container">
-                <div class=" py-[30px] ">
-                  <div class=" bg-[#ededed] py-[10px] ">
-                    <h2 class=" font-didot text-[1.75rem] leading-[2.125rem] uppercase text-center text-cusBlack ">Bathroom Accessories</h2>
-                    <p class=" font-lato text-base text-center text-cusBlack ">Our bathroom accessories blend perfectly with any home decor style. Spruce up your powder rooms with bathroom accessories that are perfect for visitors.</p>
-                  </div>
+                <div class="py-[30px]">
+                    <div class="bg-[#ededed] py-[10px]">
+                        <h2
+                            class="font-didot text-[1.75rem] leading-[2.125rem] uppercase text-center text-cusBlack"
+                        >
+                            Bathroom Accessories
+                        </h2>
+                        <p
+                            class="font-lato text-base text-center text-cusBlack"
+                        >
+                            Our bathroom accessories blend perfectly with any
+                            home decor style. Spruce up your powder rooms with
+                            bathroom accessories that are perfect for visitors.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- product list  -->
+        <section>
+            <div class="content__container">
+                <!-- filter bar  -->
+                <div class="flex justify-between">
+                    <button
+                        class="font-lato text-[18px] leading-[22.5px] text-cusBlack capitalize"
+                    >
+                        filter by
+                    </button>
+                    <div x-data="{showList: false, selected: 'Newest', selectHandler(e) { this.selected = e; this.showList = false} }" class="relative">
+                        <div
+                            @click="showList = !showList"
+                            class="font-lato text-[18px] leading-[22.5px] text-cusBlack flex justify-end cursor-pointer "
+                        >
+                            Short by: <span x-text="selected" class="ml-2 capitalize"></span>
+                            <span :class=" showList ? ' rotate-180 ' : 'rotate-0' " class="w-4 ml-2">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <polyline
+                                        points="6 9 12 15 18 9"
+                                    ></polyline>
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            x-show="showList"
+                            class=" pl-4 pr-8 py-2 border border-p4 w-[12rem] absolute z-50 right-0 bg-white "
+                        >
+                            <ul>
+                                <li  @click="selectHandler($el.innerHTML)" class=" cursor-pointer font-lato text-base py-1 capitalize text-cusBlack ">Newest</li>
+                                <li  @click="selectHandler($el.innerHTML)" class=" cursor-pointer font-lato text-base py-1 capitalize text-cusBlack ">product name</li>
+                                <li  @click="selectHandler($el.innerHTML)" class=" cursor-pointer font-lato text-base py-1 capitalize text-cusBlack ">price high</li>
+                                <li  @click="selectHandler($el.innerHTML)" class=" cursor-pointer font-lato text-base py-1 capitalize text-cusBlack ">price low</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -2793,7 +2852,7 @@
                             >
                                 <div
                                     x-on:click=" open = ! open"
-                                    class=" cursor-pointer flex flex-row justify-between py-2 md:py-0 md:mt-1"
+                                    class="cursor-pointer flex flex-row justify-between py-2 md:py-0 md:mt-1"
                                 >
                                     <h3
                                         class="font-lato text-base text-white font-bold leading-7"
@@ -2841,7 +2900,7 @@
                             >
                                 <div
                                     x-on:click=" open = ! open"
-                                    class=" cursor-pointer flex flex-row justify-between py-2 md:py-0 md:mt-1"
+                                    class="cursor-pointer flex flex-row justify-between py-2 md:py-0 md:mt-1"
                                 >
                                     <h3
                                         class="font-lato text-base text-white font-bold leading-7"
@@ -2850,7 +2909,7 @@
                                     </h3>
                                     <span
                                         :class=" open ? ' rotate-180 ' : ' rotate-0 ' "
-                                        class=" transition duration-300 md:hidden text-[22px] text-white"
+                                        class="transition duration-300 md:hidden text-[22px] text-white"
                                     >
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </span>
@@ -2887,8 +2946,9 @@
                                 x-data="{open: window.innerWidth > 640 ? true: false}"
                                 class="border-b-[1px] border-[#d2d6dc] md:border-b-0"
                             >
-                                <div  x-on:click=" open = ! open"
-                                    class=" cursor-pointer flex flex-row justify-between py-2 md:py-0 md:mt-1"
+                                <div
+                                    x-on:click=" open = ! open"
+                                    class="cursor-pointer flex flex-row justify-between py-2 md:py-0 md:mt-1"
                                 >
                                     <h3
                                         class="font-lato text-base text-white font-bold leading-7"
@@ -2896,7 +2956,7 @@
                                         HELP
                                     </h3>
                                     <span
-                                       :class=" open ? ' rotate-180 ' : ' rotate-0 ' "
+                                        :class=" open ? ' rotate-180 ' : ' rotate-0 ' "
                                         class="transition duration-300 md:hidden text-[22px] text-white"
                                     >
                                         <i class="fa-solid fa-chevron-down"></i>
