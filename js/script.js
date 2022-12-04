@@ -608,6 +608,8 @@ document.addEventListener("alpine:init", () => {
             upc: "718540716045",
         },
     });
+    // product list 
+    Alpine.data('prodList', () => [])
 });
 
 window.onload = function () {
