@@ -2595,7 +2595,7 @@
                 </div>
             </div>
         </section>
-        <!-- product list  -->
+        <!-- product filter  -->
         <section>
             <div class="content__container">
                 <!-- filter bar  -->
@@ -2605,13 +2605,23 @@
                     >
                         filter by
                     </button>
-                    <div x-data="{showList: false, selected: 'Newest', selectHandler(e) { this.selected = e; this.showList = false} }" class="relative">
+                    <div
+                        x-data="{showList: false, selected: 'Newest', selectHandler(e) { this.selected = e; this.showList = false} }"
+                        class="relative"
+                    >
                         <div
                             @click="showList = !showList"
-                            class="font-lato text-[18px] leading-[22.5px] text-cusBlack flex justify-end cursor-pointer "
+                            class="font-lato text-[18px] leading-[22.5px] text-cusBlack flex justify-end cursor-pointer"
                         >
-                            Short by: <span x-text="selected" class="ml-2 capitalize"></span>
-                            <span :class=" showList ? ' rotate-180 ' : 'rotate-0' " class="w-4 ml-2">
+                            Short by:
+                            <span
+                                x-text="selected"
+                                class="ml-2 capitalize"
+                            ></span>
+                            <span
+                                :class=" showList ? ' rotate-180 ' : 'rotate-0' "
+                                class="w-4 ml-2"
+                            >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="24"
@@ -2631,16 +2641,84 @@
                         </div>
                         <div
                             x-show="showList"
-                            class=" pl-4 pr-8 py-2 border border-p4 w-[12rem] absolute z-50 right-0 bg-white "
+                            class="pl-4 pr-8 py-2 border border-p4 w-[12rem] absolute z-50 right-0 bg-white"
                         >
                             <ul>
-                                <li  @click="selectHandler($el.innerHTML)" class=" cursor-pointer font-lato text-base py-1 capitalize text-cusBlack ">Newest</li>
-                                <li  @click="selectHandler($el.innerHTML)" class=" cursor-pointer font-lato text-base py-1 capitalize text-cusBlack ">product name</li>
-                                <li  @click="selectHandler($el.innerHTML)" class=" cursor-pointer font-lato text-base py-1 capitalize text-cusBlack ">price high</li>
-                                <li  @click="selectHandler($el.innerHTML)" class=" cursor-pointer font-lato text-base py-1 capitalize text-cusBlack ">price low</li>
+                                <li
+                                    @click="selectHandler($el.innerHTML)"
+                                    class="cursor-pointer font-lato text-base py-1 capitalize text-cusBlack"
+                                >
+                                    Newest
+                                </li>
+                                <li
+                                    @click="selectHandler($el.innerHTML)"
+                                    class="cursor-pointer font-lato text-base py-1 capitalize text-cusBlack"
+                                >
+                                    product name
+                                </li>
+                                <li
+                                    @click="selectHandler($el.innerHTML)"
+                                    class="cursor-pointer font-lato text-base py-1 capitalize text-cusBlack"
+                                >
+                                    price high
+                                </li>
+                                <li
+                                    @click="selectHandler($el.innerHTML)"
+                                    class="cursor-pointer font-lato text-base py-1 capitalize text-cusBlack"
+                                >
+                                    price low
+                                </li>
                             </ul>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <!-- product list  -->
+        <section class="mt-10">
+            <div class="content__container">
+                <div
+                    x-data="{product: prodList}"
+                    class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 "
+                >
+                    <template x-for="item in product">
+                        <div class="text-center pb-3">
+                            <div class="relative">
+                                <span
+                                    class="w-[47px] inline-block absolute left-0 top-0"
+                                >
+                                    <img
+                                        class="w-full"
+                                        src="https://platform.mudpie.com/media/label_custom/default/badge_lrg_-_script-2_1.webp"
+                                        alt="new batch"
+                                    />
+                                </span>
+                                <img
+                                    class="w-full"
+                                    :src="item.img"
+                                    alt="product img"
+                                />
+                            </div>
+                            <p
+                                x-text="item.name"
+                                class="font-lato text-base capitalize text-cusBlack text-center"
+                            ></p>
+                            <p
+                                x-text="item.price"
+                                class="font-lato text-base font-bold text-cusBlack text-center"
+                            ></p>
+                            <a
+                                href=""
+                                class="font-lato text-cusBlack text-xs mt-2 inline-block transition-all hover:underline "
+                                >+ More Styles</a
+                            >
+                        </div>
+                    </template>
+                </div>
+                <!-- pagination bar  -->
+                <div class=" text-center ">
+                    <p class=" font-lato text-base text-cusBlack text-center my-3 ">Viewing 20 of 161</p>
+                    <button class=" btn-primary mt-3 mb-7 md:max-w-[256px] ">Load more</button>
                 </div>
             </div>
         </section>

@@ -588,7 +588,7 @@ document.addEventListener("alpine:init", () => {
             img: "https://platform.mudpie.com/media/wysiwyg/Home/1122_newb2csite_home_category_linens.jpg",
         },
     ]);
-    // product page 
+    // product page
     Alpine.store("product", {
         title: "REINDEER EVERYTHING TRAY",
         price: 16.5,
@@ -597,7 +597,8 @@ document.addEventListener("alpine:init", () => {
             "https://platform.mudpie.com/media/catalog/product/4/8/48700017d.jpg",
             "https://platform.mudpie.com/media/catalog/product/4/8/48700017s.jpg",
         ],
-        selectedImg: 'https://platform.mudpie.com/media/catalog/product/4/8/48700017d.jpg',
+        selectedImg:
+            "https://platform.mudpie.com/media/catalog/product/4/8/48700017d.jpg",
         quantity: 1,
         info: "It's the happiest season of all - get ready with our Reindeer everything tray. The small ceramic tray features a detailed image of a reindeer in the center. The tray also features the words \"it's the happiest seasonal of all\". This tray can be used for serving butter or your favorite Christmas dishes!",
         details: {
@@ -608,34 +609,114 @@ document.addEventListener("alpine:init", () => {
             upc: "718540716045",
         },
     });
-    // product list 
-    Alpine.data('prodList', () => [{img : "https://platform.mudpie.com/media/catalog/product/4/7/47700319w.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "White Oyster Wood Vase", price : "$20.00"},
-    {img : "https://platform.mudpie.com/media/catalog/product/4/7/47700319n.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "Natural Oyster Wood Vase", price : "$20.00"},
-    {img : "https://platform.mudpie.com/media/catalog/product/4/4/44400097w.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "Farmhouse Christmas Wreath Soap Dish Set", price : "$18.50"},
-    {img : "https://platform.mudpie.com/media/catalog/product/4/4/44400097t.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "Farmhouse Christmas Tree Soap Dish Set", price : "$18.50"},
-    {img : "https://platform.mudpie.com/media/catalog/product/4/4/44400097j.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "Farmhouse Christmas Jingle Bell Soap Dish Set", price : "$18.50"},
-    {img : "https://platform.mudpie.com/media/catalog/product/4/4/44400087r.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "Red Christmas Soap Basket Set", price : "$22.00"},
-    {img : "https://platform.mudpie.com/media/catalog/product/4/4/44400085w.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "White Tartan Sponge and Santa Soap Set", price : "$11.50"},
-    {img : "https://platform.mudpie.com/media/catalog/product/4/4/44400085r.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "Red Tartan Sponge and Santa Soap Set", price : "$11.50"},
-    {img : "https://platform.mudpie.com/media/catalog/product/4/4/44400085g.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "Gray Tartan Sponge and Santa Soap Set", price : "$11.50"},
-    {img : "https://platform.mudpie.com/media/catalog/product/4/4/44400084.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "Deer Soap Stand Set", price : "$35.00"},
-    {img : "https://platform.mudpie.com/media/catalog/product/4/4/44400075p.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "Peace Gold Soap and Guest Towel Basket Set", price : "$35.50"},
-    {img : "https://platform.mudpie.com/media/catalog/product/4/4/44400075m.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "Merry Gold Soap and Guest Towel Basket Set", price : "$35.50"},
-    {img : "https://platform.mudpie.com/media/catalog/product/4/4/44400056.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "Reindeer Soap Pump and Sponge Holder", price : "$33.00"},
-    {img : "https://platform.mudpie.com/media/catalog/product/4/4/44400042r.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "Red Deer Soap Stand Set", price : "$31.50"},
-    {img : "https://platform.mudpie.com/media/catalog/product/4/4/44400042b.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "Black Deer Soap Stand Set", price : "$31.50"},
-    {img : "https://platform.mudpie.com/media/catalog/product/4/7/47700316y.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "Yellow Fall Small Vase", price : "$28.00"},
-    {img : "https://platform.mudpie.com/media/catalog/product/4/7/47700316g.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "Green Fall Small Vase", price : "$28.00"},
+    // product list
+    Alpine.data("prodList", () => [
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/7/47700319w.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "White Oyster Wood Vase",
+            price: "$20.00",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/7/47700319n.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "Natural Oyster Wood Vase",
+            price: "$20.00",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/4/44400097w.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "Farmhouse Christmas Wreath Soap Dish Set",
+            price: "$18.50",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/4/44400097t.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "Farmhouse Christmas Tree Soap Dish Set",
+            price: "$18.50",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/4/44400097j.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "Farmhouse Christmas Jingle Bell Soap Dish Set",
+            price: "$18.50",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/4/44400087r.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "Red Christmas Soap Basket Set",
+            price: "$22.00",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/4/44400085w.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "White Tartan Sponge and Santa Soap Set",
+            price: "$11.50",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/4/44400085r.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "Red Tartan Sponge and Santa Soap Set",
+            price: "$11.50",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/4/44400085g.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "Gray Tartan Sponge and Santa Soap Set",
+            price: "$11.50",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/4/44400084.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "Deer Soap Stand Set",
+            price: "$35.00",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/4/44400075p.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "Peace Gold Soap and Guest Towel Basket Set",
+            price: "$35.50",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/4/44400075m.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "Merry Gold Soap and Guest Towel Basket Set",
+            price: "$35.50",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/4/44400056.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "Reindeer Soap Pump and Sponge Holder",
+            price: "$33.00",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/4/44400042r.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "Red Deer Soap Stand Set",
+            price: "$31.50",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/4/44400042b.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "Black Deer Soap Stand Set",
+            price: "$31.50",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/7/47700316y.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "Yellow Fall Small Vase",
+            price: "$28.00",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/7/47700316g.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "Green Fall Small Vase",
+            price: "$28.00",
+        },
 
-    {img : "https://platform.mudpie.com/media/catalog/product/4/7/47700316b.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "Brown Fall Small Vase", price : "$28.00"},
-    
-    {img : "https://platform.mudpie.com/media/catalog/product/4/4/44400073y.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "Yellow Gather Soap Dish Set", price : "$25.00"},
-    {img : "https://platform.mudpie.com/media/catalog/product/4/4/44400073r.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp", name : "Orange Gather Soap Dish Set", price : "$25.00"}
-    ])
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/7/47700316b.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "Brown Fall Small Vase",
+            price: "$28.00",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/4/44400073y.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "Yellow Gather Soap Dish Set",
+            price: "$25.00",
+        },
+        {
+            img: "https://platform.mudpie.com/media/catalog/product/4/4/44400073r.jpg?optimize=high&fit=bounds&height=&width=384&format=pjpg&quality=75&auto=webp",
+            name: "Orange Gather Soap Dish Set",
+            price: "$25.00",
+        },
+    ]);
 });
 
 window.onload = function () {
-   new Swiper("#collection-slider", {
+    new Swiper("#collection-slider", {
         slidesPerView: 2.2,
         createElements: true,
         navigation: {
