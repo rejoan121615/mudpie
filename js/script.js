@@ -593,9 +593,21 @@ document.addEventListener("alpine:init", () => {
         title: "REINDEER EVERYTHING TRAY",
         price: 16.5,
         sku: "48700017D",
+        selected: {
+            img: "https://platform.mudpie.com/media/catalog/product/4/8/48700017d.jpg",
+            name: "Natural Oyster Wood Vase",
+        },
         imgList: [
-            "https://platform.mudpie.com/media/catalog/product/4/8/48700017d.jpg",
-            "https://platform.mudpie.com/media/catalog/product/4/8/48700017s.jpg",
+            {
+                id: 1,
+                img: "https://platform.mudpie.com/media/catalog/product/4/8/48700017d.jpg",
+                name: "Natural Oyster Wood Vase",
+            },
+            {
+                id: 2,
+                img: "https://platform.mudpie.com/media/catalog/product/4/8/48700017s.jpg",
+                name: "White Oyster Wood Vase",
+            },
         ],
         selectedImg:
             "https://platform.mudpie.com/media/catalog/product/4/8/48700017d.jpg",
@@ -607,6 +619,21 @@ document.addEventListener("alpine:init", () => {
             care: "dishwasher safe",
             instructions: "microwave safe",
             upc: "718540716045",
+        },
+        selectHandler(data) {
+            const { img, name } = data;
+            this.selected = {
+                img: img,
+                name: name,
+            };
+        },
+        quantityInc() {
+            this.quantity += 1;
+        },
+        quantityDec() {
+            if (this.quantity && !(this.quantity == 1)) {
+                this.quantity -= 1;
+            }
         },
     });
     // product list
